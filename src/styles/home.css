@@ -184,19 +184,19 @@
 
     /* Ajusta o conteúdo principal do banner */
     #cta {
-        width: 100%; /* Ocupa toda a largura */
+        width: 150%; /* Ocupa toda a largura */
         gap: 40px; /* Espaçamento reduzido entre os elementos */
         align-items: center; /* Centraliza os itens */
     }
 
     #cta .title {
-        font-size: 3rem; /* Reduz o tamanho do título */
+        font-size: 2rem; /* Reduz o tamanho do título */
         line-height: 1.2; /* Ajusta o espaçamento entre linhas */
     }
 
     #cta .description {
-        font-size: 1rem; /* Reduz o tamanho do texto descritivo */
-        line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+        font-size: 0.8rem; /* Reduz o tamanho do texto descritivo */
+        line-height: 1.6; /* Ajusta o espaçamento entre linhas */
     }
 
     /* Ajusta os botões no banner */

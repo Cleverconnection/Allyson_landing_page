@@ -274,7 +274,8 @@
 
     #menu .section-subtitle {
         font-size: 1.8rem; /* Reduz ainda mais o tamanho */
-        top: 20px;
+        margin-top: -70px;
+        margin-bottom: -50%;
     }
 
     #dishes-buttons {
@@ -290,48 +291,10 @@
 
     #dishes-content {
         width: 95%; /* Ocupa quase toda a largura */
-        min-height: 90vh;
-        padding: 10px; /* Reduz o padding */
-        gap: 10px;
-        max-height: 300px; /* Define a altura máxima do conteúdo */
+        max-height: 90%; /* Define a altura máxima do conteúdo */
         display: flex;
         flex-direction: column; /* Organiza em coluna */
         align-items: center;
-        text-align: center; /* Centraliza o conteúdo */
-    }
-
-    #service-image {
-        max-width: 40%; /* Imagem ocupa toda a largura */
-        margin-bottom: 15px; /* Espaço abaixo da imagem */
-    }
-
-    #service-text {
-        width: 100%; /* Textos ocupam toda a largura */
-        display: flex;
-        flex-direction: column; /* Empilha os textos */
-        gap: 10px; /* Espaçamento entre os textos */
-    }
-
-    #service-title {
-        font-size: rem;
-        text-align: center; /* Centraliza o título */
-        margin-top: -100%;
-    }
-
-    #service-description {
-        font-size: 0.8rem;
-        text-align: center; /* Centraliza a descrição */
-    }
-
-    #service-activities {
-        font-size: 0.7rem;
-        text-align: center; /* Centraliza a lista */
-        padding-left: 0; /* Remove o espaçamento lateral */
-        list-style: none; /* Remove os marcadores */
-    }
-
-    #service-activities li {
-        margin-bottom: 3px; /* Ajusta o espaçamento entre os itens */
     }
 }
 
