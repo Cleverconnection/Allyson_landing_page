@@ -1,0 +1,271 @@
+/* Ajusta o container do banner */
+#home {
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: row; /* Alinha os elementos horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    background-image: url('../images/background.png'); /* Define a imagem do banner */
+    background-size: cover; /* Faz a imagem preencher o espaço */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    position: relative; /* Necessário para posicionar elementos */
+    color: white; /* Define a cor padrão do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding-left: 5%; /* Espaço para afastar o texto da borda esquerda */
+}
+
+/* Estiliza o conteúdo do banner */
+#cta {
+    z-index: 2; /* Garante que fique sobre o banner */
+    display: flex;
+    flex-direction: column;
+    gap: 28px; /* Espaçamento entre os elementos */
+    width: 40%; /* Define a largura máxima do conteúdo */
+    max-width: 600px; /* Largura máxima */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    justify-content: center; /* Centraliza verticalmente dentro do #home */
+}
+
+/* Estiliza o título */
+#cta .title {
+    font-size: 3.5rem; /* Tamanho do título */
+    color: white;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Destaque para o texto em span */
+#cta .title span {
+    color: #4A48E7; /* Cor de destaque */
+}
+
+/* Estiliza a descrição */
+#cta .description {
+    font-size: 1.2rem;
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: #f0f0f0;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Botões no banner */
+#cta_buttons {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os botões */
+    justify-content: flex-start; /* Alinha os botões à esquerda */
+}
+
+#cta_buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #01000a; /* Cor do botão */
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 9px rgba(237, 235, 235, 9);
+}
+
+#cta_buttons a:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 9px rgba(237, 235, 235, 9);
+}
+
+/* Botão de telefone */
+#phone_button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: #4A48E7;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#phone_button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Redes sociais no banner */
+.social-media-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start; /* Alinha os ícones à esquerda */
+}
+
+.social-media-buttons a {
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-media-buttons a:hover {
+    transform: scale(1.2); /* Aumenta levemente ao passar o mouse */
+}
+
+/* WhatsApp */
+.social-media-buttons a:nth-child(1):hover {
+    background-color: #18a34b; /* Verde do WhatsApp */
+    color: white; /* Cor do ícone */
+}
+
+/* linkedin */
+.social-media-buttons a:nth-child(2):hover {
+    background-color: #0e4081;
+    color: white; /* Cor do ícone */
+}
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #1a9246; /* Cor do WhatsApp */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Esconde o botão inicialmente */
+    visibility: hidden; /* Remove da tela */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+#whatsapp-button a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#whatsapp-button.show {
+    opacity: 1; /* Torna visível */
+    visibility: visible; /* Mostra o botão */
+}
+
+
+@media screen and (max-width: 1170px) {
+    #home {
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #banner,
+    #banner img,
+
+    #cta {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Ajuste do container principal */
+    #home {
+        flex-direction: column; /* Alinha os elementos verticalmente */
+        padding: 100px; /* Adiciona padding geral */
+        text-align: center; /* Centraliza o texto */
+        min-height: 70vh; /* Garante a altura total da viewport */
+        background-image: url('../images/background_mobile.png'); /* Define a imagem do banner */
+        background-size: cover; /* Faz a imagem preencher o espaço */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Evita repetição */
+    }
+
+    /* Ajusta o conteúdo principal do banner */
+    #cta {
+        width: 150%; /* Ocupa toda a largura */
+        gap: 40px; /* Espaçamento reduzido entre os elementos */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #cta .title {
+        font-size: 2rem; /* Reduz o tamanho do título */
+        line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+    }
+
+    #cta .description {
+        font-size: 0.8rem; /* Reduz o tamanho do texto descritivo */
+        line-height: 1.6; /* Ajusta o espaçamento entre linhas */
+    }
+
+    /* Ajusta os botões no banner */
+    #cta_buttons {
+        flex-direction: column; /* Empilha os botões verticalmente */
+        gap: 10px; /* Reduz o espaçamento entre os botões */
+        width: 80%; /* Ocupa toda a largura disponível */
+    }
+
+    #cta_buttons a {
+        width: 100%; /* Ocupa toda a largura disponível */
+        font-size: 0.9rem; /* Reduz o tamanho do texto nos botões */
+        padding: 12px; /* Ajusta o padding interno */
+    }
+
+    /* Botão de telefone */
+    #phone_button {
+        flex-direction: column; /* Empilha os elementos dentro do botão */
+        gap: 5px; /* Ajusta o espaçamento interno */
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
+        width: 100%; /* Ocupa toda a largura disponível */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* Redes sociais no banner */
+    .social-media-buttons {
+        justify-content: center; /* Centraliza os ícones */
+        gap: 12px; /* Ajusta o espaçamento entre os ícones */
+    }
+
+    .social-media-buttons a {
+        font-size: 1.2rem; /* Reduz o tamanho dos ícones */
+    }
+
+    /* Botão flutuante do WhatsApp */
+    #whatsapp-button {
+        width: 50px; /* Reduz o tamanho do botão */
+        height: 50px; /* Reduz a altura do botão */
+        bottom: 15px; /* Ajusta a posição em relação à parte inferior */
+        left: 15px; /* Ajusta a posição em relação à lateral esquerda */
+    }
+
+    #whatsapp-button a {
+        font-size: 1.2rem; /* Reduz o tamanho do ícone */
+    }
+    #nav_name {
+        background: linear-gradient(90deg, #4A48E7, #94c2e0); /* Gradiente no fundo */
+        background-clip: text; /* Propriedade padrão */
+        -webkit-background-clip: text; /* Versão para navegadores WebKit */
+        -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+        font-size: 1.2rem; /* Tamanho da fonte */
+        font-weight: bold; /* Negrito */
+        margin-left: 0%;
+        margin-top: 0%;
+        display: flex; /* Organiza o logo e texto em linha */
+        align-items: center; /* Alinha verticalmente o texto e o logo */
+        gap: 5px; /* Espaçamento entre o logo e o texto */
+    }
+    
+    #nav_logo_small {
+        width: 55px; /* Ajuste o tamanho do logo */
+        height: auto; /* Mantém a proporção */
+        display: inline-block;
+        vertical-align: middle; /* Alinha o logo verticalmente com o texto */
+    }
+
+    #nav_logo_centered {
+        display: none; /* Inicialmente oculto */
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%);
+        width: 160px; /* Ajuste conforme o tamanho do seu logo */
+        height: auto;
+    }
+    @media (max-width: 768px) {
+        #nav_logo_centered {
+            display: block;
+        }
+    }
+}
