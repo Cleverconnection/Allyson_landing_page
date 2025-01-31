@@ -1,0 +1,111 @@
+header {
+    display: flex;
+    width: 100%;
+    padding: 8px 8%; /* Padding ajustado */
+    position: sticky; /* Mantém o navbar fixo no topo */
+    top: 0;
+    background-color: #01000a;
+    backdrop-filter: blur(10px); /* Aplica desfoque no fundo */
+    z-index: 3; /* Garante que o navbar fique acima de outros elementos */
+    box-shadow: 0px 4px 6px rgba(170, 169, 169, 0.1); /* Sombra no navbar */
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav_name {
+    background: linear-gradient(90deg, #4A48E7, #94c2e0); /* Gradiente no fundo */
+    background-clip: text; /* Propriedade padrão */
+    -webkit-background-clip: text; /* Versão para navegadores WebKit */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    margin-left: 0%;
+    margin-top: 0%;
+    display: flex; /* Organiza o logo e texto em linha */
+    align-items: center; /* Alinha verticalmente o texto e o logo */
+    gap: 5px; /* Espaçamento entre o logo e o texto */
+}
+
+#nav_logo_small {
+    width: 75px; /* Ajuste o tamanho do logo */
+    height: auto; /* Mantém a proporção */
+    display: inline-block;
+    vertical-align: middle; /* Alinha o logo verticalmente com o texto */
+}
+
+
+#nav_subtitle {
+    font-size: 1.2rem;
+}
+
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #94c2e0;
+    font-weight: 600;
+}
+
+.nav-item.active a {
+    color: #94c2e0;
+    border-bottom: 3px solid var(--color-primary-4);
+}
+.nav-item:hover {
+    transform: scale(1.25);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#mobile_btn {
+    display: none;
+}
+
+#mobile_menu {
+    display: none;
+}
+.hidden {
+    display: none !important;
+}
+
+
+@media screen and (max-width: 1170px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #94c2e0;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    } 
+}
