@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Landing page</title>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16906138365"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16906138365');
+</script>
+<body>
+    <header>
+        <nav id="navbar">
+            <i id="nav_name">
+                <!-- Logo substituindo o "C" -->
+                <img src="src/images/logo/Logo Clever.png" alt="Logo da Empresa" id="nav_logo_small">
+                LEVER 
+                <span id="nav_subtitle">Connection</span>
+            </i>
+            
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#partners">Parceiros</a>
+                </li>
+            </ul>
+            
+            <button class="btn-default" onclick="window.location.href='#contact'">
+                Envie sua Mensagem
+            </button>
+            
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>          
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#partners">Parceiros</a>
+                </li>
+            </ul>
+
+            <button class="btn-default" onclick="window.location.href='#contact'">
+                Envie sua Mensagem
+            </button>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    Your vision <br>Our
+                    <span>Expertise</span>
+                </h1>
+
+                <p class="description">
+                    Conectando tecnologia e inovação <br>para transformar seu negócio 
+                </p>
+
+                <div id="cta_buttons">
+                    <a href="#contact" class="btn-default">
+                        Contato
+                    </a>
+                
+                    <a href="tel:+55114709-9523" id="phone_button">
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        (11) 4709-9523
+                    </a>
+                </div>
+
+                <div class="social-media-buttons">
+                    <a href="https://wa.me/551147099523" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                
+                    <a href="https://www.linkedin.com/company/clever-connection/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                
+                <div id="service-titles-slider">
+                    <span class="service-title-text">Infraestrutura de TI</span>
+                    <span class="service-title-text">Serviços de Audiovisual</span>
+                    <span class="service-title-text">Cibersegurança</span>
+                    <span class="service-title-text">Serviços de Telecom</span>
+                    <span class="service-title-text">Ambiente Inteligente</span>
+                    <span class="service-title-text">Sistema de Monitoramento</span>
+                    <span class="service-title-text">Serviços de Elétrica</span>
+                </div>
+                
+                
+            </div>
+
+            <div id="banner">
+            </div>
+        </section>
+
+        <section id="menu">
+            <!-- Contêiner exclusivo para o título -->
+            <div id="menu-title">
+                <h2 class="section-subtitle">Nossos Serviços</h2>
+            </div>
+             <!-- Contêiner das abas (tabs) -->
+            <div id="tabs-container">
+                <button class="tab" data-target="button1">Infraestrutura</button>
+                <button class="tab" data-target="button2">Audiovisual</button>
+                <button class="tab" data-target="button3">Cibersegurança</button>
+                <button class="tab" data-target="button4">Telecom</button>
+                <button class="tab" data-target="button5">Automação</button>
+                <button class="tab" data-target="button6">Monitoramento</button>
+                <button class="tab" data-target="button7">Elétrica</button>
+                <button class="tab" data-target="button8">Sobre Nós</button>
+            </div>
+                <div id="dishes-content">               
+                    <img id="service-image" src="src/images/servicos/cabeamento.png" alt="Imagem do Serviço">
+                    <div id="service-text">
+                        <h3 id="service-title">Título do Serviço</h3>
+                        <p id="service-description">Breve descrição sobre o serviço oferecido.</p>
+                        <ul id="service-activities"></ul>
+                    </div>
+                    <div id="dishes-buttons">
+                        <button class="dish-button" id="button1">
+                            <img src="src/images/servicos/cabeamento.png" alt="Serviço 1">
+                            <p class="dish-text">INFRAESTRUTURA</p>
+                        </button>
+                        <button class="dish-button" id="button2">
+                            <img src="src/images/servicos/audiovisual.png" alt="Serviço 2">
+                            <p class="dish-text">AUDIOVISUAL</p>
+                        </button>
+                        <button class="dish-button" id="button3">
+                            <img src="src/images/servicos/ciberseguranca.png" alt="Serviço 3">
+                            <p class="dish-text">CIBERSEGURANÇA</p>
+                        </button>
+                        <button class="dish-button" id="button4">
+                            <img src="src/images/servicos/telecom.png" alt="Serviço 4">
+                            <p class="dish-text">TELECOM</p>
+                        </button>
+                        <button class="dish-button" id="button5">
+                            <img src="src/images/servicos/automacao.png" alt="Serviço 5">
+                            <p class="dish-text">AUTOMAÇÃO</p>
+                        </button>
+                        <button class="dish-button" id="button6">
+                            <img src="src/images/servicos/monitoramento.png" alt="Serviço 6">
+                            <p class="dish-text">MONITORAMENTO</p>
+                        </button>
+                        <button class="dish-button" id="button7">
+                            <img src="src/images/servicos/eletrica.png" alt="Serviço 7">
+                            <p class="dish-text">ELÉTRICA</p>
+                        </button>
+                        <button class="dish-button" id="button8">
+                            <img src="src/images/servicos/sobre.png" alt="Serviço 8">
+                            <p class="dish-text">SOBRE NÓS</p>
+                        </button>
+                    </div>
+                </div>                
+        </section>        
+    
+        <section id="partners">
+            <h2 class="section-title">Colaboram e acreditam na gente</h2>
+        
+            <div id="partners-clients-wrapper">
+                <!-- Bloco de Parceiros -->
+                <div class="partners-clients-section">
+                    <h3 class="section-subtitle">Nossos Clientes</h3>
+                    <div class="logos-container">
+                        <div class="logos-slider">
+                            <img src="src/images/parceiros/yara_1.png" alt="cliente 1" class="partner-logo">
+                            <img src="src/images/parceiros/hba_1.png" alt="cliente 2" class="partner-logo">
+                            <img src="src/images/parceiros/zilinskas_1.png" alt="cliente 3" class="partner-logo">
+                            <img src="src/images/parceiros/pausaativa_1.png" alt="cliente 4" class="partner-logo">
+                            <img src="src/images/parceiros/saoleopoldo_1.png" alt="cliente 5" class="partner-logo">
+                            <img src="src/images/parceiros/belasartes_1.png" alt="cliente 6" class="partner-logo">
+                            <img src="src/images/parceiros/vigilante_1.png" alt="cliente 6" class="partner-logo">
+                            
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Bloco de Clientes -->
+                <div class="partners-clients-section">
+                    <h3 class="section-subtitle">Nossos Parceiros</h3>
+                    <div class="logos-container">
+                        <div class="logos-slider">
+                            <img src="src/images/parceiros/sangfor_1.png" alt="Parceiro 1" class="partner-logo">
+                            <img src="src/images/parceiros/amatel_1.png" alt="Parceiro 2" class="partner-logo">
+                            <img src="src/images/parceiros/malwarebytes_1.png" alt="Parceiro 2" class="partner-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <div id="contact-content">
+                <!-- Formulário de Contato -->
+                <div id="contact-form">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="text" id="phone" name="phone" placeholder="Seu Telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Sua Mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-default">Enviar</button>
+                    </form>
+                </div>
+        
+                <!-- Informações de Contato -->
+                <div id="contact-info">
+                    <h2 class="section-title">Comercial</h2>
+                    <h3 class="section-subtitle">Tire suas dúvidas conosco</h3>
+                    <p><i class="fa-brands fa-whatsapp"></i> <strong>Telefone:</strong> (11) 4709-9523</p>
+                    
+                    <p><i class="fa-solid fa-envelope"></i> <strong>E-mail:</strong> contato@cleverconnection.com.br</p>
+                    <p><i class="fa-solid fa-map-marker-alt"></i> <strong>Endereço:</strong> Rua Rua Clotilde Galesi, 170, OSASCO - SP</p>
+                    <div id="map-container">
+                        <img src="src/images/maps.png" alt="Localização no Google Maps">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <img src="src/images/wave.svg" alt="">
+
+        <div id="footer_items">
+            <div class="social-media-buttons">
+                <a href="https://wa.me/551147099523" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            
+                <a href="https://www.linkedin.com/company/clever-connection/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <footer>
+                <div id="footer_items">
+                    <p id="copyright">© 2019 - Clever Connection • Todos os direitos reservados</p>
+                    <div id="footer_links">
+                        <a href="politica_privacidade.html">Política de Privacidade</a> • 
+                        <a href="termos_de_uso.html">Termos de Uso</a>
+                    </div>
+            </footer>            
+    </footer>
+    <script src="src/javascript/script.js"></script>
+
+    <div id="whatsapp-button">
+        <a href="https://wa.me/551147099523" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+</body>
+</html>
