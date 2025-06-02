@@ -1,0 +1,149 @@
+.servicos-section {
+  background-color: rgba(10, 10, 10, 0.6);
+  color: #ddd;
+  padding: 80px 20px;
+  font-family: 'Orbitron', sans-serif;
+  z-index: 5;
+  position: relative;
+  margin-top: 80px;
+}
+#servicos {
+  scroll-margin-top: 90px; /* ajuste conforme a altura da navbar + margem */
+}
+
+.servicos-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 80px;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.servicos-title {
+  width: 100%;
+  color: #aaa;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 80px;
+  text-shadow: 0 0 5px rgba(91, 88, 88, 0.6);
+  margin-top: -50px;
+}
+
+.intro-text {
+  flex: 0 1 100%;
+  min-width: 0px;
+  max-width: 500px;
+  display: flex;
+  padding-right: 30px;
+  font-family: 'arial';
+}
+
+.intro-text p {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin-top: 110px;
+}
+
+.accordion {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 30px;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.accordion-item {
+  position: relative;
+  border-bottom: 1px solid #333;
+}
+
+.accordion-header {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 1.05rem;
+  font-weight: 10;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.09em;
+  transition: color 0.9s ease, background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.accordion-header:hover {
+  color: #00d4bb;
+  background-color: rgba(0, 212, 187, 0.1);
+}
+
+.accordion-toggle {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #00d4bb;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.accordion-item.active .accordion-toggle {
+  transform: rotate(90deg);
+}
+
+.tooltip-bubble {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  background-color: #00e6e6;
+  color: #0a0a0a;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  max-width: 350px;
+  box-shadow: 0 0 8px #00e6e6;
+  white-space: normal;
+  display: none;
+  z-index: 10;
+  line-height: 1.5;
+  word-wrap: break-word;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.accordion-item.active .tooltip-bubble {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .servicos-container {
+    flex-wrap: wrap;
+  }
+  .intro-text, .accordion {
+    flex: 1 1 100%;
+    padding: 0;
+    max-width: 100%;
+    min-width: auto;
+  }
+  .tooltip-bubble {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    max-width: 100%;
+    box-shadow: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}

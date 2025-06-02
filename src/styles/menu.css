@@ -67,8 +67,9 @@
     max-width: 380px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);    
 }
+
 
 #service-text {
     display: flex;
@@ -297,6 +298,7 @@
         flex-direction: column; /* Organiza em coluna */
         align-items: center;
     }
+
 }
 
 

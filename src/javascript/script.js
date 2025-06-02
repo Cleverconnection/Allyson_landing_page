@@ -268,6 +268,6 @@ function autoSwitchContent() {
         setInterval(updateServiceTitle, 4000); // Troca a cada 4 segundos
     }
 
-    rotateServiceTitles(); // Chama a função ao carregar a página
+    rotateServiceTitles(); // Chama a função ao carregar a página   
     
 });
