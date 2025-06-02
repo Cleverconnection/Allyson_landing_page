@@ -1,0 +1,111 @@
+/* cyber_footer.css */
+
+.cyber-footer {
+  background: rgba(10, 10, 10, 0.9);
+  color: #ccc;
+  padding: 40px 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00d4bb;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #00e6e6;
+}
+
+.footer-links a:hover::after,
+.footer-links a:focus::after {
+  width: 100%;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  color: #888;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social a {
+  color: #aaa;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #00d4bb;
+  transform: translateY(-2px) scale(1.1);
+}
+
+.footer-legal {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.footer-legal a {
+  color: #777;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #00d4bb;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
