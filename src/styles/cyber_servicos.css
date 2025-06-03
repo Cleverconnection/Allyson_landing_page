@@ -147,3 +147,73 @@
     font-size: 1rem;
   }
 }
+
+/* Responsividade para smartphones */
+@media (max-width: 600px) {
+  .servicos-section {
+    padding: 60px 16px;
+    margin-top: 60px;
+  }
+
+  .servicos-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    margin-top: -40px;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+    margin-top: 60px;
+  }
+
+  .accordion-header {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+  }
+
+  .accordion-toggle {
+    font-size: 1.1rem;
+  }
+
+  .tooltip-bubble {
+    position: static;
+    transform: none;
+    margin-top: 8px;
+    max-width: 100%;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicos-section {
+    padding: 50px 12px;
+    margin-top: 50px;
+  }
+
+  .servicos-title {
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+    margin-top: -30px;
+  }
+
+  .intro-text p {
+    font-size: 0.95rem;
+    margin-top: 40px;
+  }
+
+  .accordion-header {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .accordion-toggle {
+    font-size: 1rem;
+  }
+
+  .tooltip-bubble {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+}

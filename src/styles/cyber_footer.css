@@ -97,15 +97,59 @@
   color: #00d4bb;
 }
 
-/* Responsivo */
+/* Ajustes para smartphones */
 @media (max-width: 600px) {
+  .cyber-footer {
+    padding: 30px 16px;
+    font-size: 0.85rem;
+  }
+
+  .footer-container {
+    gap: 16px;
+  }
+
   .footer-links {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
   }
 
-  .footer-social {
-    justify-content: center;
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .footer-info p {
+    font-size: 0.8rem;
+  }
+
+  .footer-social a {
+    font-size: 1rem;
+  }
+
+  .footer-legal {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-footer {
+    padding: 25px 12px;
+    font-size: 0.8rem;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+
+  .footer-info p {
+    font-size: 0.75rem;
+  }
+
+  .footer-social a {
+    font-size: 0.95rem;
+  }
+
+  .footer-legal {
+    font-size: 0.65rem;
   }
 }

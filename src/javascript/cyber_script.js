@@ -137,3 +137,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   showSlide(currentIndex);
 });
+
+// Animação de entrada para o Footer
+document.addEventListener('DOMContentLoaded', () => {
+  const footer = document.querySelector('.cyber-footer');
+
+  if (footer) {
+    // Inicialmente esconde o footer
+    footer.style.opacity = 0;
+    footer.style.transform = 'translateY(50px)';
+    footer.style.transition = 'opacity 1s ease, transform 1s ease';
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          footer.style.opacity = 1;
+          footer.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(footer);
+  }
+});
+

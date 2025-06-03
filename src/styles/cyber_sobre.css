@@ -91,3 +91,59 @@
     flex: 1 1 100%;
   }
 }
+
+/* Responsividade para smartphones */
+@media (max-width: 600px) {
+  .sobre-section {
+    padding: 60px 16px;
+    margin-bottom: 60px;
+  }
+
+  .sobre-title {
+    font-size: 2rem;
+    margin-top: -30px;
+  }
+
+  .sobre-container {
+    padding-top: 30px;
+    gap: 20px;
+  }
+
+  .sobre-topicos {
+    margin-left: 0;
+    gap: 16px;
+  }
+
+  .sobre-item h4 {
+    font-size: 0.95rem;
+  }
+
+  .sobre-item p {
+    font-size: 0.7rem;
+  }
+
+  .sobre-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-title {
+    font-size: 1.7rem;
+  }
+
+  .sobre-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .sobre-item p {
+    font-size: 0.65rem;
+  }
+
+  .sobre-text {
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+}

@@ -11,25 +11,25 @@ html, body {
   background: linear-gradient(135deg, #0a0a0a, #121212);
   color: #ddd;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: auto; /* importante para scroll vertical */
   line-height: 1.5;
 }
 
-/* Partículas de fundo */
+/* Fundo partículas */
 #particles-js {
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  pointer-events: none;
+  pointer-events: none; /* para não interferir no scroll */
 }
 
-/* Header e Navegação */
+/* Header */
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: 90px;
+  height: 90px; /* navbar maior */
   background: rgba(15, 15, 15, 0.95);
   box-shadow: 0 1px 8px rgba(0,0,0,0.8);
   display: flex;
@@ -39,17 +39,7 @@ header {
   z-index: 10;
 }
 
-#nav_name {
-  position: absolute;
-  left: 40px;
-  font-weight: 700;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #5b5858;
-  user-select: none;
-}
-
+/* Navegação centralizada */
 nav ul#nav_list {
   list-style: none;
   display: flex;
@@ -57,13 +47,13 @@ nav ul#nav_list {
   justify-content: center;
   width: 100%;
   max-width: 960px;
-  font-size: 1rem;
-  position: relative;
+  font-size: 1.0rem;
 }
 
 nav ul#nav_list li a {
   color: #aaa;
   font-weight: 500;
+  font-size: 1.0rem;
   text-decoration: none;
   padding: 10px 0;
   position: relative;
@@ -91,6 +81,108 @@ nav ul#nav_list li a.active::after {
   width: 100%;
 }
 
+/* Logo texto */
+#nav_name {
+  position: absolute;
+  left: 40px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #5b5858;
+  user-select: none;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  height: calc(100vh - 90px);
+  margin: 90px auto 0;
+  padding: 0 24px;
+  z-index: 5;
+  position: relative;
+  color: #eee;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+  color: #dcdcdc;
+  text-shadow: none;
+}
+
+main p {
+  font-size: 1.15rem;
+  margin-bottom: 48px;
+  color: #bbb;
+}
+
+.cta-button {
+  padding: 14px 36px;
+  border-radius: 6px;
+  font-weight: 700;
+  background: transparent;
+  color: #00e6e6;
+  border: 2px solid #00e6e6;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  user-select: none;
+}
+
+.cta-button:hover {
+  background: #00e6e6;
+  color: #0a0a0a;
+}
+
+#nav_name {
+  position: absolute;
+  left: 40px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #5b5858;
+  user-select: none;
+}
+
+nav ul#nav_list {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  width: 100%;
+  max-width: 960px;
+  font-size: 1.0rem;
+  position: relative;
+}
+
+/* Estilo para os links */
+nav ul#nav_list li a {
+  color: #aaa;
+  font-weight: 500;
+  font-size: 1.0rem;
+  text-decoration: none;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+nav ul#nav_list li a:hover,
+nav ul#nav_list li a.active {
+  color: #00e6e6;
+}
+
+/* Linha animada */
 nav ul#nav_list::after {
   content: "";
   position: absolute;
@@ -103,30 +195,40 @@ nav ul#nav_list::after {
   transition: all 0.3s ease;
 }
 
-/* Hero Section */
+/* Seção hero cyber */
 .hero-cyber {
+  /* altura mínima para ocupar toda a viewport menos header */
   min-height: calc(100vh - 90px);
+
+  /* remova height: auto ou fixed, para não quebrar */
   height: calc(100vh - 90px);
+
+  /* padding para espaçamento interno */
   padding: 160px 20px 100px 20px;
+
   text-align: center;
   color: white;
   position: relative;
   overflow: visible;
   z-index: 5;
+
+  /* flex para centralizar conteúdo */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+
 .hero-content {
-  width: 90%;
+  max-width: none;
   margin: 0 auto;
+  width: 90%;
 }
 
 .hero-cyber .subtitle {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.0rem;
   letter-spacing: 0.15em;
   color: #aaa;
   margin-bottom: 1rem;
@@ -146,6 +248,7 @@ nav ul#nav_list::after {
   text-shadow: 0 0 10px rgba(152, 150, 150, 0.7);
 }
 
+/* Botão Fale com um especialista */
 .btn-hero {
   display: inline-block;
   padding: 14px 36px;
@@ -163,12 +266,96 @@ nav ul#nav_list::after {
   color: #0a0a0a;
 }
 
-/* Responsivo */
+/* Ajustes para smartphones */
 @media (max-width: 600px) {
-  nav ul#nav_list {
-    gap: 24px;
+  
+  header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 12px;
   }
-  main h1 {
-    font-size: 2rem;
+
+  #nav_name {
+    position: relative;
+    left: auto;
+    top: auto;
+    font-size: 1.3rem; /* aumentei um pouco */
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  nav ul#nav_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px; /* ligeiramente maior */
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem; /* aumentei um pouco */
+    width: 100%;
+    padding: 0 10px; /* ajusta a margem lateral */
+  }
+
+  nav ul#nav_list li a {
+    font-size: 0.85rem; /* aumentei um pouco */
+    padding: 6px 4px;   /* ajustei padding para caber mais */
+  }
+
+  .hero-cyber {
+    padding: 120px 16px 60px 16px;
+  }
+
+  .hero-cyber .subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-cyber .hero-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .btn-hero {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 55px;
+    padding: 0 10px;
+  }
+
+  #nav_name {
+    font-size: 1.1rem;
+    left: 10px;
+  }
+
+  nav ul#nav_list {
+    gap: 12px;
+    font-size: 0.8rem;
+  }
+
+  nav ul#nav_list li a {
+    font-size: 0.8rem;
+  }
+  
+  .hero-cyber {
+    padding: 100px 12px 50px 12px;
+  }
+
+  .hero-cyber .subtitle {
+    font-size: 0.75rem;
+  }
+
+  .hero-cyber .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .btn-hero {
+    padding: 8px 20px;
+    font-size: 0.8rem;
   }
 }
