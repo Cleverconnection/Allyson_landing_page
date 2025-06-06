@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-/* Estilos globais */
+/* Estilos base */
 html, body {
   height: 100%;
   font-family: 'Orbitron', sans-serif;
@@ -16,16 +16,10 @@ html, body {
   line-height: 1.5;
 }
 
-#privacidade {
-  scroll-margin-top: 90px; /* Ajuste conforme a altura do cabeçalho */
-  margin-top: 50px; /* Exemplo de margem, caso precise */
-}
-
-/* Fundo partículas */
+/* Partículas */
 #particles-js {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 0;
@@ -33,11 +27,10 @@ html, body {
 }
 
 /* Header */
-header {
+header#privacidade-header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   height: 90px;
   background: rgba(15, 15, 15, 0.95);
   box-shadow: 0 1px 8px rgba(0,0,0,0.8);
@@ -48,33 +41,45 @@ header {
   z-index: 10;
 }
 
+/* Logo */
+#nav_name_privacidade {
+  position: absolute;
+  left: 40px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #5b5858;
+  user-select: none;
+}
+
 /* Navegação */
-nav ul#nav_list {
+nav#privacidade-nav ul#nav_list {
   list-style: none;
   display: flex;
   gap: 48px;
   justify-content: center;
   width: 100%;
   max-width: 960px;
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 
-nav ul#nav_list li a {
+nav#privacidade-nav ul#nav_list li a {
   color: #aaa;
   font-weight: 500;
-  font-size: 1.0rem;
   text-decoration: none;
   padding: 10px 0;
   position: relative;
   transition: color 0.25s ease;
 }
 
-nav ul#nav_list li a:hover,
-nav ul#nav_list li a.active {
+nav#privacidade-nav ul#nav_list li a:hover,
+nav#privacidade-nav ul#nav_list li a.active {
   color: #00e6e6;
 }
 
-nav ul#nav_list li a::after {
+nav#privacidade-nav ul#nav_list li a::after {
   content: '';
   position: absolute;
   bottom: -6px;
@@ -85,31 +90,24 @@ nav ul#nav_list li a::after {
   transition: width 0.25s ease;
 }
 
-nav ul#nav_list li a:hover::after,
-nav ul#nav_list li a.active::after {
+nav#privacidade-nav ul#nav_list li a:hover::after,
+nav#privacidade-nav ul#nav_list li a.active::after {
   width: 100%;
 }
 
-/* Logo texto */
-#nav_name {
-  position: absolute;
-  left: 40px;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #5b5858;
-  user-select: none;
+/* Seção */
+#privacidade {
+  scroll-margin-top: 90px;
+  margin-top: 50px;
 }
 
-/* Seção Política de Privacidade */
 .privacidade-section {
   padding: 80px 20px;
   color: #fff;
   background: rgba(0, 0, 0, 0.6);
   margin-top: 90px;
   border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
 .privacidade-title {
@@ -156,22 +154,87 @@ nav ul#nav_list li a.active::after {
   color: #ddd;
 }
 
-/* Adicionando um sombreado na seção */
-.privacidade-section {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-}
+/* ============================================
+   Responsividade: até 1170px (telas médias)
+   ============================================ */
+@media screen and (max-width: 1170px) {
+  #nav_name_privacidade {
+    font-size: 1.2rem;
+    left: 20px;
+  }
 
-/* Responsivo */
-@media (max-width: 768px) {
+  nav#privacidade-nav ul#nav_list {
+    gap: 24px;
+    font-size: 0.95rem;
+  }
+
+  nav#privacidade-nav ul#nav_list li a {
+    font-size: 0.95rem;
+  }
+
   .privacidade-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .privacidade-container {
-    padding: 10px;
+    padding: 0 15px;
   }
 
-  .privacidade-container p, .privacidade-container h3 {
-    font-size: 1rem;
+  .btn-hero {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
+   Responsividade: até 600px (smartphones)
+   ============================================ */
+@media screen and (max-width: 600px) {
+  header#privacidade-header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 12px;
+  }
+
+  #nav_name_privacidade {
+    position: relative;
+    left: auto;
+    text-align: center;
+    margin-bottom: 12px;
+    display: none;
+  }
+
+  nav#privacidade-nav ul#nav_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.8rem;
+    justify-content: center;
+    padding: 0;
+  }
+
+  nav#privacidade-nav ul#nav_list li a {
+    font-size: 0.8rem;
+    padding: 6px 0;
+  }
+
+  .privacidade-title {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .privacidade-container p,
+  .privacidade-container h3,
+  .privacidade-container li {
+    font-size: 0.95rem;
+  }
+
+  .privacidade-container {
+    padding: 0 10px;
+  }
+
+  .btn-hero {
+    padding: 10px 20px;
+    font-size: 0.85rem;
   }
 }

@@ -1,5 +1,5 @@
 /* Reset */
-* {
+#etica-page * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -11,30 +11,31 @@ html, body {
   background: linear-gradient(135deg, #0a0a0a, #121212);
   color: #ddd;
   overflow-x: hidden;
-  overflow-y: auto; /* importante para scroll vertical */
+  overflow-y: auto;
   line-height: 1.5;
 }
 
-#etica {
-  scroll-margin-top: 90px; /* Ajuste conforme a altura do cabeçalho */
-  margin-top: 50px; /* Exemplo de margem, caso precise */
+/* Ajuste para rolagem */
+#etica-page #etica {
+  scroll-margin-top: 90px;
+  margin-top: 50px;
 }
 
 /* Fundo partículas */
-#particles-js {
+#etica-page #particles-js {
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  pointer-events: none; /* para não interferir no scroll */
+  pointer-events: none;
 }
 
-/* Header */
-header {
+/* Header fixo com logo */
+#etica-page header {
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: 90px; /* navbar maior */
+  height: 90px;
   background: rgba(15, 15, 15, 0.95);
   box-shadow: 0 1px 8px rgba(0,0,0,0.8);
   display: flex;
@@ -44,50 +45,8 @@ header {
   z-index: 10;
 }
 
-/* Navegação centralizada */
-nav ul#nav_list {
-  list-style: none;
-  display: flex;
-  gap: 48px;
-  justify-content: center;
-  width: 100%;
-  max-width: 960px;
-  font-size: 1.0rem;
-}
-
-nav ul#nav_list li a {
-  color: #aaa;
-  font-weight: 500;
-  font-size: 1.0rem;
-  text-decoration: none;
-  padding: 10px 0;
-  position: relative;
-  transition: color 0.25s ease;
-}
-
-nav ul#nav_list li a:hover,
-nav ul#nav_list li a.active {
-  color: #00e6e6;
-}
-
-nav ul#nav_list li a::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #00e6e6;
-  transition: width 0.25s ease;
-}
-
-nav ul#nav_list li a:hover::after,
-nav ul#nav_list li a.active::after {
-  width: 100%;
-}
-
-/* Logo texto */
-#nav_name {
+/* Logo */
+#etica-page #nav_name_etica {
   position: absolute;
   left: 40px;
   font-family: 'Orbitron', sans-serif;
@@ -99,16 +58,59 @@ nav ul#nav_list li a.active::after {
   user-select: none;
 }
 
+/* Navegação centralizada */
+#etica-page nav ul#nav_list {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  width: 100%;
+  max-width: 960px;
+  font-size: 1rem;
+}
+
+#etica-page nav ul#nav_list li a {
+  color: #aaa;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+#etica-page nav ul#nav_list li a:hover,
+#etica-page nav ul#nav_list li a.active {
+  color: #00e6e6;
+}
+
+#etica-page nav ul#nav_list li a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00e6e6;
+  transition: width 0.25s ease;
+}
+
+#etica-page nav ul#nav_list li a:hover::after,
+#etica-page nav ul#nav_list li a.active::after {
+  width: 100%;
+}
+
 /* Seção Código de Ética */
-.etica-section {
+#etica-page .etica-section {
   padding: 80px 20px;
   color: #fff;
   background: rgba(0, 0, 0, 0.6);
   margin-top: 90px;
   border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
-.etica-title {
+#etica-page .etica-title {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -119,55 +121,91 @@ nav ul#nav_list li a.active::after {
   text-shadow: 0 0 10px rgba(152, 150, 150, 0.7);
 }
 
-.etica-container {
+#etica-page .etica-container {
   max-width: 1000px;
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   color: #bbb;
 }
 
-.etica-container p {
+#etica-page .etica-container p {
   font-size: 1.15rem;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
-.etica-container h3 {
+#etica-page .etica-container h3 {
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 10px;
   color: #00e6e6;
 }
 
-.etica-container ul {
+#etica-page .etica-container ul {
   list-style-type: disc;
   padding-left: 30px;
   margin-bottom: 40px;
 }
 
-.etica-container li {
+#etica-page .etica-container li {
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 10px;
   color: #ddd;
 }
 
-/* Adicionando um sombreado na seção */
-.etica-section {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-}
+/* Responsivo para telas médias */
+@media screen and (max-width: 1170px) {
+  #etica-page nav ul#nav_list {
+    gap: 32px;
+    font-size: 0.95rem;
+  }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .etica-title {
+  #etica-page #nav_name_etica {
+    font-size: 1.4rem;
+    left: 20px;
+  }
+
+  #etica-page .etica-title {
     font-size: 2rem;
   }
 
-  .etica-container {
+  #etica-page .etica-container p,
+  #etica-page .etica-container h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Responsivo para smartphones */
+@media screen and (max-width: 600px) {
+  #etica-page nav ul#nav_list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #etica-page header {
+    height: auto;
+    flex-direction: column;
+    padding: 15px 10px;
+  }
+
+  #etica-page #nav_name_etica {
+    position: static;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  #etica-page .etica-title {
+    font-size: 1.6rem;
+  }
+
+  #etica-page .etica-container {
     padding: 10px;
   }
 
-  .etica-container p, .etica-container h3 {
-    font-size: 1rem;
+  #etica-page .etica-container p,
+  #etica-page .etica-container h3 {
+    font-size: 0.95rem;
   }
 }

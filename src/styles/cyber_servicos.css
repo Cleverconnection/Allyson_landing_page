@@ -163,12 +163,13 @@
 
   .intro-text p {
     font-size: 1rem;
-    margin-top: 60px;
+    margin-top: -30px;
   }
 
   .accordion-header {
     font-size: 0.95rem;
-    padding: 10px 14px;
+    padding: 15px 14px;
+    margin-top: -30px;
   }
 
   .accordion-toggle {
@@ -186,34 +187,4 @@
   }
 }
 
-@media (max-width: 480px) {
-  .servicos-section {
-    padding: 50px 12px;
-    margin-top: 50px;
-  }
 
-  .servicos-title {
-    font-size: 1.7rem;
-    margin-bottom: 40px;
-    margin-top: -30px;
-  }
-
-  .intro-text p {
-    font-size: 0.95rem;
-    margin-top: 40px;
-  }
-
-  .accordion-header {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-  }
-
-  .accordion-toggle {
-    font-size: 1rem;
-  }
-
-  .tooltip-bubble {
-    font-size: 0.85rem;
-    padding: 8px 10px;
-  }
-}

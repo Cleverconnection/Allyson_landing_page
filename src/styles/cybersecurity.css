@@ -1,11 +1,11 @@
 /* Reset */
-* {
+.pagina-cybersecurity * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+.pagina-cybersecurity html, body {
   height: 100%;
   font-family: 'Orbitron', sans-serif;
   background: linear-gradient(135deg, #0a0a0a, #121212);
@@ -16,7 +16,7 @@ html, body {
 }
 
 /* Fundo partículas */
-#particles-js {
+.pagina-cybersecurity #particles-js {
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
@@ -26,7 +26,7 @@ html, body {
 }
 
 /* Header */
-header {
+.pagina-cybersecurity header {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: 90px; /* navbar maior */
@@ -40,7 +40,7 @@ header {
 }
 
 /* Navegação centralizada */
-nav ul#nav_list {
+.pagina-cybersecurity nav ul#nav_list {
   list-style: none;
   display: flex;
   gap: 48px;
@@ -50,7 +50,7 @@ nav ul#nav_list {
   font-size: 1.0rem;
 }
 
-nav ul#nav_list li a {
+.pagina-cybersecurity nav ul#nav_list li a {
   color: #aaa;
   font-weight: 500;
   font-size: 1.0rem;
@@ -61,11 +61,11 @@ nav ul#nav_list li a {
 }
 
 nav ul#nav_list li a:hover,
-nav ul#nav_list li a.active {
+.pagina-cybersecurity nav ul#nav_list li a.active {
   color: #00e6e6;
 }
 
-nav ul#nav_list li a::after {
+.pagina-cybersecurity nav ul#nav_list li a::after {
   content: '';
   position: absolute;
   bottom: -6px;
@@ -77,12 +77,12 @@ nav ul#nav_list li a::after {
 }
 
 nav ul#nav_list li a:hover::after,
-nav ul#nav_list li a.active::after {
+.pagina-cybersecurity nav ul#nav_list li a.active::after {
   width: 100%;
 }
 
 /* Logo texto */
-#nav_name {
+.pagina-cybersecurity #nav_name_cyber{
   position: absolute;
   left: 40px;
   font-family: 'Orbitron', sans-serif;
@@ -95,7 +95,7 @@ nav ul#nav_list li a.active::after {
 }
 
 /* Main content */
-main {
+.pagina-cybersecurity main {
   max-width: 900px;
   height: calc(100vh - 90px);
   margin: 90px auto 0;
@@ -110,7 +110,7 @@ main {
   align-items: center;
 }
 
-main h1 {
+.pagina-cybersecurity main h1 {
   font-weight: 700;
   font-size: 2.8rem;
   margin-bottom: 24px;
@@ -118,13 +118,13 @@ main h1 {
   text-shadow: none;
 }
 
-main p {
+.pagina-cybersecurity main p {
   font-size: 1.15rem;
   margin-bottom: 48px;
   color: #bbb;
 }
 
-.cta-button {
+.pagina-cybersecurity .cta-button {
   padding: 14px 36px;
   border-radius: 6px;
   font-weight: 700;
@@ -138,12 +138,12 @@ main p {
   user-select: none;
 }
 
-.cta-button:hover {
+.pagina-cybersecurity .cta-button:hover {
   background: #00e6e6;
   color: #0a0a0a;
 }
 
-#nav_name {
+.pagina-cybersecurity #nav_name_cyber {
   position: absolute;
   left: 40px;
   font-family: 'Orbitron', sans-serif;
@@ -155,7 +155,7 @@ main p {
   user-select: none;
 }
 
-nav ul#nav_list {
+.pagina-cybersecurity nav ul#nav_list {
   list-style: none;
   display: flex;
   gap: 48px;
@@ -167,7 +167,7 @@ nav ul#nav_list {
 }
 
 /* Estilo para os links */
-nav ul#nav_list li a {
+.pagina-cybersecurity nav ul#nav_list li a {
   color: #aaa;
   font-weight: 500;
   font-size: 1.0rem;
@@ -178,12 +178,12 @@ nav ul#nav_list li a {
 }
 
 nav ul#nav_list li a:hover,
-nav ul#nav_list li a.active {
+.pagina-cybersecurity nav ul#nav_list li a.active {
   color: #00e6e6;
 }
 
 /* Linha animada */
-nav ul#nav_list::after {
+.pagina-cybersecurity nav ul#nav_list::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -196,7 +196,7 @@ nav ul#nav_list::after {
 }
 
 /* Seção hero cyber */
-.hero-cyber {
+.pagina-cybersecurity .hero-cyber {
   min-height: calc(100vh - 90px);
   height: calc(100vh - 90px);
   padding: 160px 20px 100px 20px;
@@ -211,13 +211,13 @@ nav ul#nav_list::after {
   align-items: center;
 }
 
-.hero-content {
+.pagina-cybersecurity .hero-content {
   max-width: none;
   margin: 0 auto;
   width: 90%;
 }
 
-.hero-cyber .subtitle {
+.pagina-cybersecurity .hero-cyber .subtitle {
   font-weight: 700;
   font-size: 1.0rem;
   letter-spacing: 0.15em;
@@ -227,7 +227,7 @@ nav ul#nav_list::after {
   text-transform: uppercase;
 }
 
-.hero-cyber .hero-title {
+.pagina-cybersecurity .hero-cyber .hero-title {
   font-weight: 900;
   font-size: 1.9rem;
   line-height: 1.2;
@@ -240,7 +240,7 @@ nav ul#nav_list::after {
 }
 
 /* Botão Fale com um especialista */
-.btn-hero {
+.pagina-cybersecurity .btn-hero {
   display: inline-block;
   padding: 14px 36px;
   font-weight: 700;
@@ -252,13 +252,13 @@ nav ul#nav_list::after {
   user-select: none;
 }
 
-.btn-hero:hover {
+.pagina-cybersecurity .btn-hero:hover {
   background-color: #00e6e6;
   color: #0a0a0a;
 }
 
 /* Social Icons Styling */
-nav .social-icons {
+.pagina-cybersecurity nav .social-icons {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -266,19 +266,19 @@ nav .social-icons {
   right: 20px;
 }
 
-nav .social-icons a {
+.pagina-cybersecurity nav .social-icons a {
   color: gray;
   font-size: 20px;
   transition: color 0.3s ease;
 }
 
-nav .social-icons a:hover {
+.pagina-cybersecurity nav .social-icons a:hover {
   color: #ccc;
 }
 
 /* Ajustes para smartphones */
-@media (max-width: 600px) {
-  header {
+@media screen and (max-width: 1170px) {
+.pagina-cybersecurity   header {
     height: auto;
     flex-direction: column;
     align-items: center;
@@ -286,13 +286,13 @@ nav .social-icons a:hover {
     padding: 10px 12px;
   }
 
-  #nav_name {
+.pagina-cybersecurity   #nav_name_cyber {
     font-size: 1.3rem;
     text-align: center;
     margin-bottom: 45px;
   }
 
-  nav ul#nav_list {
+.pagina-cybersecurity   nav ul#nav_list {
     flex-direction: row;
     gap: 5px;
     justify-content: center;
@@ -302,93 +302,143 @@ nav .social-icons a:hover {
     margin-top: 50px;
   }
 
-  nav ul#nav_list li a {
+.pagina-cybersecurity   nav ul#nav_list li a {
     font-size: 1rem;
     padding: 6px 0;
   }
 
-  nav .social-icons {
+.pagina-cybersecurity   nav .social-icons {
     flex-direction: row;
     gap: 10px;
     margin-top: 10px;
     right: auto;
   }
 
-  nav .social-icons a {
+.pagina-cybersecurity   nav .social-icons a {
     font-size: 18px;
   }
 
-  .hero-cyber {
+.pagina-cybersecurity   .hero-cyber {
     padding: 120px 16px 60px 16px;
   }
 
-  .hero-cyber .subtitle {
+.pagina-cybersecurity   .hero-cyber .subtitle {
     font-size: 0.8rem;
     margin-bottom: 0.8rem;
   }
 
-  .hero-cyber .hero-title {
+.pagina-cybersecurity   .hero-cyber .hero-title {
     font-size: 1.4rem;
     margin-bottom: 1.8rem;
   }
 
-  .btn-hero {
+.pagina-cybersecurity   .btn-hero {
     padding: 10px 24px;
     font-size: 0.85rem;
   }
 
-  nav .social-icons {
+.pagina-cybersecurity   nav .social-icons {
     right: 10px;
   }
 
-  nav .social-icons a {
+.pagina-cybersecurity   nav .social-icons a {
     font-size: 18px;
   }
 }
 
-@media (max-width: 480px) {
-  header {
+@media screen and (max-width: 600px) {
+.pagina-cybersecurity   header {
     height: 55px;
     padding: 0 10px;
   }
 
-  #nav_name {
-    font-size: 1.1rem;
+.pagina-cybersecurity   #nav_name_cyber {
+    font-size: 1rem;
+    margin-left: 30px;
+    margin-top: 6px;
+    display: none;
+  }
+
+.pagina-cybersecurity   nav ul#nav_list {
+    gap: 15px;
+    font-size: 0.6rem;
+    margin-top: 20px;
+  }
+
+.pagina-cybersecurity   nav ul#nav_list li a {
+    font-size: 0.8rem;
+  }
+
+.pagina-cybersecurity   .hero-cyber {
+    padding: 100px 12px 50px 12px;
+  }
+
+.pagina-cybersecurity   .hero-cyber .subtitle {
+    font-size: 0.75rem;
+  }
+
+.pagina-cybersecurity   .hero-cyber .hero-title {
+    font-size: 1rem;
+  }
+
+.pagina-cybersecurity   .btn-hero {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+
+.pagina-cybersecurity   nav .social-icons {
+    right: 5px;
+    margin-top: -18px;
+  }
+
+.pagina-cybersecurity   nav .social-icons a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+.pagina-cybersecurity   header {
+    height: 55px;
+    padding: 0 10px;
+  }
+
+.pagina-cybersecurity   #nav_name_cyber {
+    font-size: 0.4rem;
     left: 10px;
   }
 
-  nav ul#nav_list {
+.pagina-cybersecurity   nav ul#nav_list {
     gap: 12px;
     font-size: 0.8rem;
     margin-top: 50px;
   }
 
-  nav ul#nav_list li a {
+.pagina-cybersecurity   nav ul#nav_list li a {
     font-size: 0.8rem;
   }
 
-  .hero-cyber {
+.pagina-cybersecurity   .hero-cyber {
     padding: 100px 12px 50px 12px;
   }
 
-  .hero-cyber .subtitle {
+.pagina-cybersecurity   .hero-cyber .subtitle {
     font-size: 0.75rem;
   }
 
-  .hero-cyber .hero-title {
+.pagina-cybersecurity   .hero-cyber .hero-title {
     font-size: 1.2rem;
   }
 
-  .btn-hero {
+.pagina-cybersecurity   .btn-hero {
     padding: 8px 20px;
     font-size: 0.8rem;
   }
 
-  nav .social-icons {
+.pagina-cybersecurity   nav .social-icons {
     right: 5px;
   }
 
-  nav .social-icons a {
+.pagina-cybersecurity   nav .social-icons a {
     font-size: 16px;
   }
 }
