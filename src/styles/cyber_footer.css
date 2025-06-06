@@ -1,14 +1,16 @@
 /* cyber_footer.css */
 
 .cyber-footer {
-  background: rgba(10, 10, 10, 0.9);
-  color: #ccc;
+  background: rgba(0, 0, 0, 0.529);
+  color: #cccccc6c;
   padding: 40px 20px;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.9rem;
   text-align: center;
   position: relative;
   z-index: 5;
+  box-shadow: 0 -90px 0px rgba(10, 10, 10, 0.6); /* (horizontal, vertical, blur-radius, spread-radius) */
+ 
 }
 
 .footer-container {
@@ -17,7 +19,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
 }
 
 .footer-links {

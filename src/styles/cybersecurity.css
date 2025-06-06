@@ -197,28 +197,19 @@ nav ul#nav_list::after {
 
 /* Seção hero cyber */
 .hero-cyber {
-  /* altura mínima para ocupar toda a viewport menos header */
   min-height: calc(100vh - 90px);
-
-  /* remova height: auto ou fixed, para não quebrar */
   height: calc(100vh - 90px);
-
-  /* padding para espaçamento interno */
   padding: 160px 20px 100px 20px;
-
   text-align: center;
   color: white;
   position: relative;
   overflow: visible;
   z-index: 5;
-
-  /* flex para centralizar conteúdo */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 
 .hero-content {
   max-width: none;
@@ -266,9 +257,27 @@ nav ul#nav_list::after {
   color: #0a0a0a;
 }
 
+/* Social Icons Styling */
+nav .social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+}
+
+nav .social-icons a {
+  color: gray;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+nav .social-icons a:hover {
+  color: #ccc;
+}
+
 /* Ajustes para smartphones */
 @media (max-width: 600px) {
-  
   header {
     height: auto;
     flex-direction: column;
@@ -278,28 +287,35 @@ nav ul#nav_list::after {
   }
 
   #nav_name {
-    position: relative;
-    left: auto;
-    top: auto;
-    font-size: 1.3rem; /* aumentei um pouco */
+    font-size: 1.3rem;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 45px;
   }
 
   nav ul#nav_list {
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 14px; /* ligeiramente maior */
+    gap: 5px;
     justify-content: center;
-    align-items: center;
-    font-size: 0.85rem; /* aumentei um pouco */
+    font-size: 0.65rem;
     width: 100%;
-    padding: 0 10px; /* ajusta a margem lateral */
+    padding: 0;
+    margin-top: 50px;
   }
 
   nav ul#nav_list li a {
-    font-size: 0.85rem; /* aumentei um pouco */
-    padding: 6px 4px;   /* ajustei padding para caber mais */
+    font-size: 1rem;
+    padding: 6px 0;
+  }
+
+  nav .social-icons {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+    right: auto;
+  }
+
+  nav .social-icons a {
+    font-size: 18px;
   }
 
   .hero-cyber {
@@ -320,6 +336,14 @@ nav ul#nav_list::after {
     padding: 10px 24px;
     font-size: 0.85rem;
   }
+
+  nav .social-icons {
+    right: 10px;
+  }
+
+  nav .social-icons a {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -336,12 +360,13 @@ nav ul#nav_list::after {
   nav ul#nav_list {
     gap: 12px;
     font-size: 0.8rem;
+    margin-top: 50px;
   }
 
   nav ul#nav_list li a {
     font-size: 0.8rem;
   }
-  
+
   .hero-cyber {
     padding: 100px 12px 50px 12px;
   }
@@ -357,5 +382,13 @@ nav ul#nav_list::after {
   .btn-hero {
     padding: 8px 20px;
     font-size: 0.8rem;
+  }
+
+  nav .social-icons {
+    right: 5px;
+  }
+
+  nav .social-icons a {
+    font-size: 16px;
   }
 }
