@@ -179,21 +179,31 @@ html, body {
 /* Responsivo para smartphones */
 @media screen and (max-width: 600px) {
   #etica-page nav ul#nav_list {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.8rem;
+    justify-content: center;
+    padding: 0;
+  }
+
+  #etica-page nav ul#nav_list li a {
+    font-size: 0.7rem;
+    padding: 6px 0;
   }
 
   #etica-page header {
-    height: auto;
     flex-direction: column;
-    padding: 15px 10px;
+    height: auto;
+    padding: 10px 12px;
   }
 
   #etica-page #nav_name_etica {
-    position: static;
+     position: relative;
+    left: auto;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    display: none;
   }
 
   #etica-page .etica-title {
