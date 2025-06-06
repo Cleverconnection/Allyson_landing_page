@@ -81,16 +81,55 @@
   box-shadow: 0 0 15px #000403;
 }
 
-@media (max-width: 900px) {
-  .sobre-container {
-    flex-direction: column;
-    gap: 30px;
+
+@media screen and (max-width: 1170px) {
+  .pagina-cybersecurity .sobre-section {
+    padding: 60px 24px;
+    margin-bottom: 60px;
   }
 
-  .sobre-text, .sobre-topicos {
-    flex: 1 1 100%;
+  .pagina-cybersecurity .sobre-title {
+    font-size: 2rem;
+    margin-top: -30px;
+    text-align: center;
+  }
+
+  .pagina-cybersecurity .sobre-container {
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 40px;
+    align-items: center;
+  }
+
+  .pagina-cybersecurity .sobre-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .pagina-cybersecurity .sobre-topicos {
+    margin-left: 0;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .pagina-cybersecurity .sobre-item {
+    padding: 12px;
+  }
+
+  .pagina-cybersecurity .sobre-item h4 {
+    font-size: 1rem;
+  }
+
+  .pagina-cybersecurity .sobre-item p {
+    font-size: 0.8rem;
+    line-height: 1.6;
   }
 }
+
 
 /* Responsividade para smartphones */
 @media (max-width: 600px) {
@@ -100,7 +139,7 @@
   }
 
   .sobre-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: -30px;
   }
 
@@ -126,24 +165,5 @@
     font-size: 0.9rem;
     line-height: 1.7;
     padding: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .sobre-title {
-    font-size: 1.7rem;
-  }
-
-  .sobre-item h4 {
-    font-size: 0.9rem;
-  }
-
-  .sobre-item p {
-    font-size: 0.65rem;
-  }
-
-  .sobre-text {
-    font-size: 0.85rem;
-    padding: 12px;
   }
 }

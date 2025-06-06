@@ -276,75 +276,59 @@ nav ul#nav_list li a:hover,
   color: #ccc;
 }
 
-/* Ajustes para smartphones */
 @media screen and (max-width: 1170px) {
-.pagina-cybersecurity   header {
+  .pagina-cybersecurity header {
     height: auto;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 10px 12px;
+    padding: 16px;
   }
 
-.pagina-cybersecurity   #nav_name_cyber {
-    font-size: 1.3rem;
+  .pagina-cybersecurity #nav_name_cyber {
+    font-size: 2rem;
+    margin-bottom: 12px;
     text-align: center;
-    margin-bottom: 45px;
+    position: relative;
+    left: 0;
   }
 
-.pagina-cybersecurity   nav ul#nav_list {
-    flex-direction: row;
-    gap: 5px;
-    justify-content: center;
-    font-size: 0.65rem;
+  .pagina-cybersecurity nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 0;
-    margin-top: 50px;
   }
 
-.pagina-cybersecurity   nav ul#nav_list li a {
-    font-size: 1rem;
-    padding: 6px 0;
-  }
-
-.pagina-cybersecurity   nav .social-icons {
+  .pagina-cybersecurity nav ul#nav_list {
+    display: flex;
     flex-direction: row;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .pagina-cybersecurity nav ul#nav_list li a {
+    font-size: 0.95rem;
+    padding: 6px 8px;
+  }
+
+  .pagina-cybersecurity nav .social-icons {
+    display: flex;
+    
+    gap: 14px;
     margin-top: 10px;
-    right: auto;
+    position: absolute;
+    
   }
 
-.pagina-cybersecurity   nav .social-icons a {
-    font-size: 18px;
-  }
-
-.pagina-cybersecurity   .hero-cyber {
-    padding: 120px 16px 60px 16px;
-  }
-
-.pagina-cybersecurity   .hero-cyber .subtitle {
-    font-size: 0.8rem;
-    margin-bottom: 0.8rem;
-  }
-
-.pagina-cybersecurity   .hero-cyber .hero-title {
-    font-size: 1.4rem;
-    margin-bottom: 1.8rem;
-  }
-
-.pagina-cybersecurity   .btn-hero {
-    padding: 10px 24px;
-    font-size: 0.85rem;
-  }
-
-.pagina-cybersecurity   nav .social-icons {
-    right: 10px;
-  }
-
-.pagina-cybersecurity   nav .social-icons a {
+  .pagina-cybersecurity nav .social-icons a {
     font-size: 18px;
   }
 }
+
 
 @media screen and (max-width: 600px) {
 .pagina-cybersecurity   header {
@@ -378,7 +362,7 @@ nav ul#nav_list li a:hover,
   }
 
 .pagina-cybersecurity   .hero-cyber .hero-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
 .pagina-cybersecurity   .btn-hero {

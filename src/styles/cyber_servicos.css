@@ -126,25 +126,68 @@
   opacity: 1;
 }
 
-/* Responsividade */
-@media (max-width: 900px) {
-  .servicos-container {
-    flex-wrap: wrap;
+/* Responsividade para telas médias (até 1170px) */
+@media screen and (max-width: 1170px) {
+  .pagina-cybersecurity .servicos-section {
+    padding: 60px 24px;
+    margin-top: 60px;
   }
-  .intro-text, .accordion {
-    flex: 1 1 100%;
-    padding: 0;
+
+  #servicos {
+  scroll-margin-top: 120px; /* ajuste conforme a altura da navbar + margem */
+}
+
+  .pagina-cybersecurity .servicos-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: -30px;
+  }
+
+  .pagina-cybersecurity .servicos-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .pagina-cybersecurity .intro-text {
+    padding-right: 0;
+    justify-content: center;
     max-width: 100%;
-    min-width: auto;
   }
-  .tooltip-bubble {
+
+  .pagina-cybersecurity .intro-text p {
+    font-size: 1.05rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .pagina-cybersecurity .accordion {
+    padding-left: 0;
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .pagina-cybersecurity .accordion-header {
+    font-size: 1rem;
+    padding: 14px 18px;
+  }
+
+  .pagina-cybersecurity .accordion-toggle {
+    font-size: 1.2rem;
+  }
+
+  .pagina-cybersecurity .tooltip-bubble {
     position: static;
     transform: none;
-    margin-top: 10px;
+    margin-top: 8px;
     max-width: 100%;
+    padding: 12px 16px;
+    font-size: 0.9rem;
     box-shadow: none;
-    padding: 10px 15px;
-    font-size: 1rem;
+    background-color: #00e6e6;
+    color: #0a0a0a;
   }
 }
 
@@ -156,7 +199,7 @@
   }
 
   .servicos-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 50px;
     margin-top: -40px;
   }

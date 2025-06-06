@@ -174,23 +174,82 @@
     right: -40px;
   }
 
-  /* Ajuste para responsivo */
-  @media (max-width: 900px) {
-    .parceiro-gallery {
-      width: 100%;
-      height: auto;  /* Permitir que a altura se ajuste */
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    .slide-arrow.left {
-      left: 5px;
-    }
-
-    .slide-arrow.right {
-      right: 5px;
-    }
+@media screen and (max-width: 1170px) {
+  .pagina-cybersecurity .parceiro-section {
+    padding: 60px 24px;
+    margin-bottom: 60px;
   }
+
+  #parceiro {
+  scroll-margin-top: 120px; /* ajuste conforme a altura da navbar + margem */
+}
+
+  .pagina-cybersecurity .parceiro-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    margin-top: -30px;
+  }
+
+  .pagina-cybersecurity .parceiro-container {
+    flex-direction: column;
+    gap: 32px;
+    margin: 50px auto;
+    align-items: center;
+  }
+
+  .pagina-cybersecurity .parceiro-text {
+    font-size: 1.05rem;
+    text-align: center;
+    padding: 0 10px;
+    max-width: 100%;
+  }
+
+  .pagina-cybersecurity .parceiro-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .pagina-cybersecurity .parceiro-text p {
+    font-size: 0.95rem;
+  }
+
+  .pagina-cybersecurity .parceiro-header {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+
+  .pagina-cybersecurity .parceiro-toggle {
+    font-size: 1.1rem;
+  }
+
+  .pagina-cybersecurity .parceiro-detail {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .pagina-cybersecurity .parceiro-gallery {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+
+  .pagina-cybersecurity .slide-arrow.left,
+  .pagina-cybersecurity .slide-arrow.right {
+    font-size: 22px;
+    padding: 6px 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .pagina-cybersecurity .slide-arrow.left {
+    left: 8px;
+  }
+
+  .pagina-cybersecurity .slide-arrow.right {
+    right: 8px;
+  }
+}
 
   /* Responsividade para smartphones */
 @media (max-width: 600px) {
@@ -200,7 +259,7 @@
   }
 
   .parceiro-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 30px;
     margin-top: -30px;
   }
@@ -260,38 +319,5 @@
 
   .slide-arrow.right {
     right: 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  .parceiro-title {
-    font-size: 1.7rem;
-    margin-bottom: 25px;
-  }
-
-  .parceiro-text h3 {
-    font-size: 1rem;
-  }
-
-  .parceiro-text p {
-    font-size: 0.85rem;
-  }
-
-  .parceiro-header {
-    font-size: 0.9rem;
-  }
-
-  .parceiro-toggle {
-    font-size: 0.95rem;
-  }
-
-  .parceiro-detail {
-    font-size: 0.8rem;
-  }
-
-  .slide-arrow.left,
-  .slide-arrow.right {
-    font-size: 18px;
-    padding: 5px 8px;
   }
 }
