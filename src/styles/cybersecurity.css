@@ -58,6 +58,7 @@
   padding: 10px 0;
   position: relative;
   transition: color 0.25s ease;
+  left: 29px;
 }
 
 nav ul#nav_list li a:hover,
@@ -79,68 +80,6 @@ nav ul#nav_list li a:hover,
 nav ul#nav_list li a:hover::after,
 .pagina-cybersecurity nav ul#nav_list li a.active::after {
   width: 100%;
-}
-
-/* Logo texto */
-.pagina-cybersecurity #nav_name_cyber{
-  position: absolute;
-  left: 40px;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 700;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #5b5858;
-  user-select: none;
-}
-
-/* Main content */
-.pagina-cybersecurity main {
-  max-width: 900px;
-  height: calc(100vh - 90px);
-  margin: 90px auto 0;
-  padding: 0 24px;
-  z-index: 5;
-  position: relative;
-  color: #eee;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.pagina-cybersecurity main h1 {
-  font-weight: 700;
-  font-size: 2.8rem;
-  margin-bottom: 24px;
-  color: #dcdcdc;
-  text-shadow: none;
-}
-
-.pagina-cybersecurity main p {
-  font-size: 1.15rem;
-  margin-bottom: 48px;
-  color: #bbb;
-}
-
-.pagina-cybersecurity .cta-button {
-  padding: 14px 36px;
-  border-radius: 6px;
-  font-weight: 700;
-  background: transparent;
-  color: #00e6e6;
-  border: 2px solid #00e6e6;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  user-select: none;
-}
-
-.pagina-cybersecurity .cta-button:hover {
-  background: #00e6e6;
-  color: #0a0a0a;
 }
 
 .pagina-cybersecurity #nav_name_cyber {
@@ -275,6 +214,36 @@ nav ul#nav_list li a:hover,
 .pagina-cybersecurity nav .social-icons a:hover {
   color: #ccc;
 }
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #1a9246;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: o;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+#whatsapp-button a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#whatsapp-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 @media screen and (max-width: 1170px) {
   .pagina-cybersecurity header {
@@ -321,7 +290,6 @@ nav ul#nav_list li a:hover,
     gap: 14px;
     margin-top: 10px;
     position: absolute;
-    
   }
 
   .pagina-cybersecurity nav .social-icons a {
@@ -331,54 +299,82 @@ nav ul#nav_list li a:hover,
 
 
 @media screen and (max-width: 600px) {
-.pagina-cybersecurity   header {
+  .pagina-cybersecurity header {
     height: 55px;
     padding: 0 10px;
   }
 
-.pagina-cybersecurity   #nav_name_cyber {
+  .pagina-cybersecurity #nav_name_cyber {
     font-size: 1rem;
     margin-left: 30px;
     margin-top: 6px;
     display: none;
   }
 
-.pagina-cybersecurity   nav ul#nav_list {
+  .pagina-cybersecurity nav ul#nav_list {
     gap: 15px;
     font-size: 0.6rem;
     margin-top: 20px;
   }
 
-.pagina-cybersecurity   nav ul#nav_list li a {
+  .pagina-cybersecurity nav ul#nav_list li a {
     font-size: 0.8rem;
   }
 
-.pagina-cybersecurity   .hero-cyber {
+  .pagina-cybersecurity .hero-cyber {
     padding: 100px 12px 50px 12px;
   }
 
-.pagina-cybersecurity   .hero-cyber .subtitle {
+  .pagina-cybersecurity .hero-cyber .subtitle {
     font-size: 0.75rem;
   }
 
-.pagina-cybersecurity   .hero-cyber .hero-title {
+  .pagina-cybersecurity .hero-cyber .hero-title {
     font-size: 0.9rem;
   }
 
-.pagina-cybersecurity   .btn-hero {
+  .pagina-cybersecurity .btn-hero {
     padding: 8px 20px;
     font-size: 0.8rem;
   }
 
-.pagina-cybersecurity   nav .social-icons {
+  .pagina-cybersecurity nav .social-icons {
     right: 5px;
     margin-top: -18px;
   }
 
-.pagina-cybersecurity   nav .social-icons a {
+  .pagina-cybersecurity nav .social-icons a {
     font-size: 12px;
   }
+
+  /* Estilo responsivo para o botão do WhatsApp */
+  .pagina-cybersecurity #whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+  }
+
+  .pagina-cybersecurity #whatsapp-button.show {
+    opacity: 1;
+    visibility: visible;
+  }
 }
+
 
 @media screen and (max-width: 300px) {
 .pagina-cybersecurity   header {

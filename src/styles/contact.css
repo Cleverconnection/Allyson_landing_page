@@ -55,21 +55,6 @@ textarea {
     resize: none;
 }
 
-.btn-default {
-    background-color: #4A90E2;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-default:hover {
-    background-color: #357ABD;
-}
-
 #contact-info p {
     margin-bottom: 15px;
     font-size: 1rem;
@@ -130,12 +115,6 @@ textarea {
     .form-group input, .form-group textarea {
         font-size: 0.9rem; /* Reduz o tamanho do texto */
     }
-
-    .btn-default {
-        font-size: 0.9rem; /* Ajusta o tamanho do botão */
-        padding: 8px 15px; /* Reduz o padding do botão */
-    }
-
     #contact-info p {
         font-size: 0.9rem; /* Ajusta o tamanho do texto */
     }
@@ -166,11 +145,6 @@ textarea {
     .form-group input, .form-group textarea {
         font-size: 0.8rem; /* Ajusta o tamanho do texto */
         padding: 8px; /* Reduz o padding interno */
-    }
-
-    .btn-default {
-        font-size: 0.8rem; /* Reduz o tamanho do botão */
-        padding: 6px 12px; /* Ajusta o padding do botão */
     }
 
     #contact-info p {

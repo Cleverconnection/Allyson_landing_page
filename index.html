@@ -6,12 +6,18 @@
     <title>Landing page</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href="src/styles/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles/contact.css" />
+    <link rel="stylesheet" href="src/styles/footer.css" />
+    <link rel="stylesheet" href="src/styles/partners.css" />
+    <link rel="stylesheet" href="src/styles/menu.css" />
+    <link rel="stylesheet" href="src/styles/home.css" />
+    <link rel="stylesheet" href="src/styles/header.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Landing page</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <!-- Event snippet for Visualização de página conversion page -->
     <script>
@@ -31,184 +37,149 @@
         }
     </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16906138365"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-16906138365');
-</script>
-<body>
+<body class="pagina-index">
     <header>
         <nav id="navbar">
-            <i id="nav_name">
-                <img src="src/images/logo/Logo Clever.png" alt="Logo da Empresa" id="nav_logo_small" />
-                LEVER
-                <span id="nav_subtitle">Connection</span>
-            </i>
-            <ul id="nav_list">
-                <li class="nav-item">
-                    <a href="index.html">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#menu">Serviços</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#partners">Parceiros</a>
-                </li>
-                <li class="nav-item">
-                    <a href="cybersecurity.html">Cibersegurança</a>
-                </li>
-            </ul>
-            <button class="btn-default" onclick="window.location.href='#contact'">
-                Envie sua Mensagem
-            </button>
-            <button id="mobile_btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="nav-left">
+                <i id="nav_name">
+                    <span class="company-name">CLEVER <em>Connection</em></span>
+                </i>
+            </div>
+
+            <div class="nav-center">
+                <ul id="nav_list">
+                    <li class="nav-item"><a href="index.html">Início</a></li>
+                    <li class="nav-item"><a href="#menu">Serviços</a></li>
+                    <li class="nav-item"><a href="#partners">Parceiros</a></li>
+                    <li class="nav-item"><a href="cybersecurity.html">Cibersegurança</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <button class="btn-default" onclick="window.location.href='#contact'">Envie sua Mensagem</button>
+                <button id="mobile_btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
         </nav>
 
         <div id="mobile_menu">
             <ul id="mobile_nav_list">
-                <li class="nav-item">
-                    <a href="index.html">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#menu">Serviços</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#partners">Parceiros</a>
-                </li>
-                <li class="nav-item">
-                    <a href="cybersecurity.html">Cibersegurança</a>
-                </li>
+                <li class="nav-item"><a href="index.html">Início</a></li>
+                <li class="nav-item"><a href="#menu">Serviços</a></li>
+                <li class="nav-item"><a href="#partners">Parceiros</a></li>
+                <li class="nav-item"><a href="cybersecurity.html">Cibersegurança</a></li>
             </ul>
-            <button class="btn-default" onclick="window.location.href='#contact'">
-                Envie sua Mensagem
-            </button>
+            <button class="btn-default" onclick="window.location.href='#contact'">Envie sua Mensagem</button>
         </div>
     </header>
+
     <main id="content">
         <section id="home">
-            <div class="shape"></div>
             <div id="cta">
                 <h1 class="title">
-                    Your vision <br>Our
-                    <span>Expertise</span>
+                    Your vision <br>Our <span>Expertise</span>
                 </h1>
                 <p class="description">
-                    Conectando tecnologia e inovação <br>para transformar seu negócio
+                    Tecnologia e inovação para transformar seu negócio
                 </p>
-                <div id="cta_buttons">
-                    <a href="#contact" class="btn-default">Contato</a>
-                    <a href="tel:+55114709-9523" id="phone_button">
-                        <button class="btn-default"><i class="fa-solid fa-phone"></i></button>
-                        (11) 4709-9523
-                    </a>
-                </div>
-                <div class="social-media-buttons">
-                    <a href="https://wa.me/551147099523" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/clever-connection/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </div>
-                <div id="service-titles-slider">
-                    <span class="service-title-text">Infraestrutura de TI</span>
-                    <span class="service-title-text">Serviços de Audiovisual</span>
-                    <span class="service-title-text">Cibersegurança</span>
-                    <span class="service-title-text">Serviços de Telecom</span>
-                    <span class="service-title-text">Ambiente Inteligente</span>
-                    <span class="service-title-text">Sistema de Monitoramento</span>
-                </div>
+                <div id="cta_buttons"></div>
             </div>
-            <div id="banner"></div>
+
+            <div id="right-side">
+                <a href="cybersecurity.html">
+                    <div class="image-overlay">
+                        <!-- Vídeo de Cibersegurança -->
+                        <video id="cybersecurity-video" autoplay loop muted>
+                            <source src="src/videos/vdhomecyber.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <!-- Texto sobre o vídeo -->
+                        <div class="text-overlay">
+                            <h2>CIBERSEGURANÇA</h2>
+                            <p>Saiba mais como proteger sua empresa contra ataques cibernéticos</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </section>
-        <section id="menu">
-            <div id="menu-title">
-                <h2 class="section-subtitle">Nossos Serviços</h2>
-            </div>
-            <div id="tabs-container">
-                <button class="tab" data-target="button1">Infraestrutura</button>
-                <button class="tab" data-target="button2">Audiovisual</button>
-                <button class="tab" data-target="button3">Cibersegurança</button>
-                <button class="tab" data-target="button4">Telecom</button>
-                <button class="tab" data-target="button5">Automação</button>
-                <button class="tab" data-target="button6">Monitoramento</button>
-                <button class="tab" data-target="button8">Sobre Nós</button>
-            </div>
-            <div id="dishes-content">
-                <img id="service-image" src="src/images/servicos/cabeamento.png" alt="Imagem do Serviço" />
-                <div id="service-text">
-                    <h3 id="service-title">Título do Serviço</h3>
-                    <p id="service-description">Breve descrição sobre o serviço oferecido.</p>
-                    <ul id="service-activities"></ul>
+
+        <section id="servicos" class="servicos-section">
+            <h2 class="servicos-title">NOSSOS SERVIÇOS</h2>
+            <div class="servicos-container">
+                <div class="intro-text">
+                    <p>Contamos com uma equipe experiente, especializada e com certificações globais em cibersegurança, oferecendo soluções sob medida para proteger seu ambiente contra ameaças e vulnerabilidades.</p>
                 </div>
-                <div id="dishes-buttons">
-                    <button class="dish-button" id="button1">
-                        <img src="src/images/servicos/cabeamento.png" alt="Serviço 1" />
-                        <p class="dish-text">INFRAESTRUTURA</p>
-                    </button>
-                    <button class="dish-button" id="button2">
-                        <img src="src/images/servicos/audiovisual.png" alt="Serviço 2" />
-                        <p class="dish-text">AUDIOVISUAL</p>
-                    </button>
-                    <button class="dish-button" id="button3">
-                        <img src="src/images/servicos/ciberseguranca.png" alt="Serviço 3" />
-                        <p class="dish-text">CIBERSEGURANÇA</p>
-                    </button>
-                    <button class="dish-button" id="button4">
-                        <img src="src/images/servicos/telecom.png" alt="Serviço 4" />
-                        <p class="dish-text">TELECOM</p>
-                    </button>
-                    <button class="dish-button" id="button5">
-                        <img src="src/images/servicos/automacao.png" alt="Serviço 5" />
-                        <p class="dish-text">AUTOMAÇÃO</p>
-                    </button>
-                    <button class="dish-button" id="button6">
-                        <img src="src/images/servicos/monitoramento.png" alt="Serviço 6" />
-                        <p class="dish-text">MONITORAMENTO</p>
-                    </button>
-                    <button class="dish-button" id="button8">
-                        <img src="src/images/servicos/sobre.png" alt="Serviço 8" />
-                        <p class="dish-text">SOBRE NÓS</p>
-                    </button>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="button1">Infraestrutura de Rede <span class="accordion-toggle">►</span></button>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="button2">Sistema Audiovisual <span class="accordion-toggle">►</span></button>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="button3">Serviços de Cibersegurança <span class="accordion-toggle">►</span></button>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="button4">Serviços de Telecom <span class="accordion-toggle">►</span></button>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="button5">Ambiente Inteligênte <span class="accordion-toggle">►</span></button>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="button6">Sistema de Monitoramento <span class="accordion-toggle">►</span></button>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" data-target="button7">Sobre Nós <span class="accordion-toggle">►</span></button>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Popup de conteúdo -->
+        <div id="popup">
+            <div class="popup-content">
+                <img id="popup-image" src="" alt="Imagem do Serviço" />
+                <div class="service-text">
+                    <h2 id="popup-title"></h2>
+                    <p id="popup-description"></p>
+                    <ul id="popup-activities"></ul>
+                </div>
+            </div>
+            <span class="close-popup">X</span>
+        </div>
+
+        <!-- Seção de Parceiros -->
         <section id="partners">
             <h2 class="section-title">Colaboram e acreditam na gente</h2>
             <div id="partners-clients-wrapper">
                 <div class="partners-clients-section">
                     <h3 class="section-subtitle">Nossos Clientes</h3>
-                    <div class="logos-container">
-                        <div class="logos-slider">
-                            <img src="src/images/parceiros/yara_1.png" alt="cliente 1" class="partner-logo" />
-                            <img src="src/images/parceiros/hba_1.png" alt="cliente 2" class="partner-logo" />
-                            <img src="src/images/parceiros/zilinskas_1.png" alt="cliente 3" class="partner-logo" />
-                            <img src="src/images/parceiros/pausaativa_1.png" alt="cliente 4" class="partner-logo" />
-                            <img src="src/images/parceiros/saoleopoldo_1.png" alt="cliente 5" class="partner-logo" />
-                            <img src="src/images/parceiros/belasartes_1.png" alt="cliente 6" class="partner-logo" />
-                            <img src="src/images/parceiros/vigilante_1.png" alt="cliente 7" class="partner-logo" />
-                            <img src="src/images/parceiros/mundiale_1.png" alt="cliente 8" class="partner-logo" />
-                        </div>
+                    <div class="logos-container clients">
+                        <img src="src/images/parceiros/yara_1.png" alt="cliente 1" class="partner-logo" />
+                        <img src="src/images/parceiros/hba_1.png" alt="cliente 2" class="partner-logo" />
+                        <img src="src/images/parceiros/zilinskas_1.png" alt="cliente 3" class="partner-logo" />
+                        <img src="src/images/parceiros/pausaativa_1.png" alt="cliente 4" class="partner-logo" />
+                        <img src="src/images/parceiros/saoleopoldo_1.png" alt="cliente 5" class="partner-logo" />
+                        <img src="src/images/parceiros/belasartes_1.png" alt="cliente 6" class="partner-logo" />
+                        <img src="src/images/parceiros/vigilante_1.png" alt="cliente 7" class="partner-logo" />
+                        <img src="src/images/parceiros/mundiale_1.png" alt="cliente 8" class="partner-logo" />
                     </div>
                 </div>
                 <div class="partners-clients-section">
                     <h3 class="section-subtitle">Nossos Parceiros</h3>
-                    <div class="logos-container">
-                        <div class="logos-slider">
-                            <img src="src/images/parceiros/sangfor_1.png" alt="Parceiro 1" class="partner-logo" />
-                            <img src="src/images/parceiros/amatel_1.png" alt="Parceiro 2" class="partner-logo" />
-                            <img src="src/images/parceiros/malwarebytes_1.png" alt="Parceiro 3" class="partner-logo" />
-                            <img src="src/images/parceiros/terzian_1.png" alt="Parceiro 4" class="partner-logo" />
-                        </div>
+                    <div class="logos-container partners">
+                        <img src="src/images/parceiros/sangfor_1.png" alt="Parceiro 1" class="partner-logo" />
+                        <img src="src/images/parceiros/amatel_1.png" alt="Parceiro 2" class="partner-logo" />
+                        <img src="src/images/parceiros/malwarebytes_1.png" alt="Parceiro 3" class="partner-logo" />
+                        <img src="src/images/parceiros/terzian_1.png" alt="Parceiro 4" class="partner-logo" />
                     </div>
                 </div>
             </div>
         </section>
+
+
+        <!-- Seção de Contato -->
         <section id="contact">
             <div id="contact-content">
                 <div id="contact-form">
@@ -246,6 +217,7 @@
             </div>
         </section>
     </main>
+
     <footer>
         <img src="src/images/wave.svg" alt="" />
         <div id="footer_items">
@@ -258,33 +230,22 @@
                 </a>
             </div>
         </div>
-        <footer>
-            <div id="footer_items">
-                <p id="copyright">© 2019 - Clever Connection • Todos os direitos reservados</p>
-                <div id="footer_links">
-                    <a href="politica_privacidade.html">Política de Privacidade</a> •
-                    <a href="termos_de_uso.html">Termos de Uso</a>
-                </div>
+        <div id="footer_items">
+            <p id="copyright">© 2019 - Clever Connection • Todos os direitos reservados</p>
+            <div id="footer_links">
+                <a href="politica_privacidade.html">Política de Privacidade</a> •
+                <a href="termos_de_uso.html">Termos de Uso</a>
             </div>
-        </footer>
+        </div>
     </footer>
+
     <script src="src/javascript/script.js"></script>
+
     <div id="whatsapp-button">
         <a href="https://wa.me/551147099523" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
-    <script>
-        (function () {
-            const currentPage = window.location.pathname.split("/").pop();
-            const navLinks = document.querySelectorAll("#nav_list li a, #mobile_nav_list li a");
-            navLinks.forEach(link => {
-                const hrefPage = link.getAttribute("href");
-                if (hrefPage === currentPage) {
-                    link.classList.add("active");
-                }
-            });
-        })();
-    </script>
+
 </body>
 </html>

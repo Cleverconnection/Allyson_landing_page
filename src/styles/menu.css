@@ -1,304 +1,295 @@
-#menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 120vh;
-    background-image: url('../images/background_servicos.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.pagina-index .servicos-section {
+    background-color: rgba(10, 10, 10, 0.6);
+    color: #ddd;
+    padding: 120px 20px; /* Aumentei o padding para dar mais altura à seção */
+    font-family: 'Orbitron', sans-serif;
+    z-index: 5;
     position: relative;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0px 0px 9px #4A48E7;
-    overflow-x: hidden;
-}
-/* Estilo do título */
-#menu-title .section-subtitle {
-    font-size: 2.5rem;
-    font-weight: bold;
-    background: linear-gradient(90deg, #4A90E2, #7FDBFF);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    animation: fadeIn 2s ease;
-    margin-top: -25%;
-    padding: 10% 0;
+    margin-top: 80px;
+    min-height: 600px; /* Garante que a seção tenha uma altura mínima */
 }
 
-/* Animação de entrada */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+#servicos {
+    scroll-margin-top: 90px; /* ajuste conforme a altura da navbar + margem */
 }
 
-
-/* Contêiner de conteúdo dinâmico */
-#dishes-content {
-    position: relative;
+.pagina-index .servicos-container {
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; /* Alinha os elementos ao longo do eixo principal */
-    width: 90%;
-    max-width: 1200px;
-    min-height: 470px;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    gap: 20px;
-    overflow: hidden;
+    gap: 80px;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between; /* Alinha os dois blocos para as extremidades */
 }
 
-/* Estilo da imagem */
-#service-image {
-    max-width: 380px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);    
-}
-
-
-#service-text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: left;
-    justify-content: flex-start;
+.pagina-index .servicos-title {
     width: 100%;
-}
-
-#service-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    margin: 0;
+    margin-top: -40px;
+    color: #aaa;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-align: center;
+    margin-bottom: 60px; /* Espaço entre o título e o conteúdo abaixo */
+    text-shadow: 0 0 5px rgba(91, 88, 88, 0.6);
 }
 
-#service-description {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.4;
+.pagina-index .intro-text {
+    flex: 0 1 100%;
+    display: flex;
+    padding-right: 30px;
+    font-family: 'arial';
+    justify-content: center; /* Centraliza o texto */
+    align-items: center;
+    min-width: 0px;
+    max-width: 500px;
+    margin-top: 150px;
 }
 
-#service-activities {
+.pagina-index .intro-text p {
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.pagina-index .accordion {
+    flex: 1 1 60%; /* Ajuste para que ocupe o espaço correto */
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* Maior espaçamento entre os itens */
+    padding-left: 30px;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.pagina-index .accordion-item {
+    position: relative;
+    border-bottom: 1px solid #333;
+}
+
+.pagina-index .accordion-header {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 1.05rem;
+    font-weight: 10;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.09em;
+    transition: color 0.9s ease, background-color 0.3s ease;
+    border-radius: 6px;
+}
+
+.pagina-index .accordion-header:hover {
+    color: #00d4bb;
+    background-color: rgba(0, 212, 187, 0.1);
+}
+
+.pagina-index .accordion-toggle {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #00d4bb;
+    transition: transform 0.3s ease;
+    user-select: none;
+}
+
+.pagina-index .accordion-item.active .accordion-toggle {
+    transform: rotate(90deg);
+}
+
+/* Popup de conteúdo */
+.pagina-index #popup {
+    display: none;
+    position: fixed;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Garante que o popup esteja centralizado */
+    width: 70%; /* Define a largura do popup */
+    height: auto; /* A altura é ajustada automaticamente */
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro */
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 9999; /* Certifica que o popup ficará acima de outros elementos */
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7); /* Sombra para destacar */
+}
+
+/* Estilo do conteúdo do popup */
+.pagina-index #popup .popup-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #222;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Imagem do serviço */
+.pagina-index #popup .popup-content img {
+    max-width: 45%; /* A imagem ocupa 45% da largura */
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Conteúdo do serviço */
+.pagina-index #popup .popup-content .service-text {
+    max-width: 50%; /* O texto ocupa 50% da largura */
+    font-size: 1rem;
+}
+
+/* Título do serviço no popup */
+.pagina-index #popup .popup-content .service-text h2 {
+    font-size: 1.8rem;
+    color: #00ff99;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Descrição do serviço */
+.pagina-index #popup .popup-content .service-text p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+/* Lista de atividades */
+.pagina-index #popup .popup-content .service-text ul {
     list-style-type: disc;
     padding-left: 20px;
-    color: #555;
-    line-height: 1.4;
-    font-size: 0.8rem;
+    color: #bbb;
+    font-size: 1rem;
 }
 
-#dishes-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-    margin-top: 20px; /* Espaço abaixo do texto */
+/* Botão de fechar o popup */
+.pagina-index #popup .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
 }
 
-.dish-button {
-    background: linear-gradient(135deg, #18467b, #030635);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: transform 0.3s ease, background 0.3s ease;
-    width: 130px;
-    height: 100px;
-    flex-direction: row;
+.pagina-index #popup .close-popup:hover {
+    color: #fff;
 }
 
-.dish-button:hover {
-    background: linear-gradient(135deg, var(--color-primary-3), #07011c);
-    transform: scale(1.05);
-    
-}
-
-.dish-button img {
-    align-items: center;
-    text-align: center;
-    width: 60%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.dish-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
-}
-
-.dish-text {
-    margin-top: 10px;
-    font-size: 0.7rem;
-    font-weight: 500;
-    color: #fafafa;
-    text-align: center;
-}
-#tabs-container {
-    display: none;
-}
-
-/* Estilo para telas menores que 1170px */
+/* Responsividade para telas médias (até 1170px) */
 @media screen and (max-width: 1170px) {
-    #menu {
-        padding: 10px;
+    .pagina-index .servicos-section {
+        padding: 60px 24px;
+        margin-top: 60px;
     }
 
-    #menu-title {
-        top: 20px; /* Ajusta a posição do título */
-        font-size: 1.6rem; /* Reduz o tamanho do texto */
-        margin-top: 8%;
-        padding: -3%;
-    
+    #servicos {
+        scroll-margin-top: 120px; /* ajuste conforme a altura da navbar + margem */
     }
 
-    #services-wrapper {
-        flex-direction: column; /* Alinha em coluna */
+    .pagina-index .servicos-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        margin-top: -30px;
+    }
+
+    .pagina-index .servicos-container {
+        flex-direction: column;
+        gap: 40px;
         align-items: center;
+    }
+
+    .pagina-index .intro-text {
+        padding-right: 0;
         justify-content: center;
-    }
-    #tabs-container {
-        display: flex;
-        flex-wrap: wrap; /* Permite que os botões quebrem linha */
-        justify-content: center; /* Centraliza os botões */
-        gap: 5px; /* Espaçamento entre os botões */
-        margin-top: 50px; /* Espaço superior */
+        max-width: 100%;
     }
 
-    .tab {
-        padding: 0px 5px;
-        border-radius: 8px; /* Bordas arredondadas */
-        background: linear-gradient(135deg, #18467b, #030635); /* Gradiente de cor */
-        color: white; /* Texto branco */
-        font-size: 0.7rem; /* Ajuste no tamanho do texto */
-        text-transform: uppercase; /* Texto em letras maiúsculas */
-        letter-spacing: 1px; /* Espaçamento entre letras */
-        border: none; /* Remove borda padrão */
-        cursor: pointer; /* Mostra o cursor de clique */
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Transição suave */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    }
-
-    .tab:hover {
-        background: linear-gradient(135deg, #021e2a, #00050a); /* Gradiente invertido ao passar o mouse */
-        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Intensifica a sombra */
-        transform: scale(1.05); /* Aumenta levemente o tamanho */
-    }
-
-    .tab:active {
-        transform: scale(0.95); /* Reduz levemente o tamanho ao clicar */
-        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Reduz a sombra ao clicar */
-    }
-
-    /* Ajuste dos botões */
-    #dishes-buttons {
-        position: static; /* Remove a posição absoluta */
-        display: none; /* Exibe os botões como linha */
-        flex-wrap: wrap; /* Permite que quebrem linha */
-        justify-content: center; /* Centraliza os botões */
-        gap: 10px; /* Espaçamento entre os botões */
-        margin-bottom: 20px; /* Espaço abaixo */
-        width: 100%; /* Ocupa toda a largura disponível */
-    }
-
-    .dish-button {
-        width: 50px; /* Ajusta o tamanho dos botões */
-        height: 50px; /* Ajusta a altura */
-        font-size: 0.7rem; /* Tamanho do texto */
-    }
-
-    .dish-text {
-        font-size: 0.6rem; /* Ajusta o texto dos botões */
-    }
-
-    /* Conteúdo dinâmico */
-    #dishes-content {
-        position: static; /* Remove a posição absoluta */
-        width: 80%; /* Ajusta a largura */
-        min-height: 70vh;
-        margin: 20px 0; /* Adiciona espaçamento vertical */
-        padding: 15px;
-        background: rgba(255, 255, 255, 0.9); /* Mantém o fundo */
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-        border-radius: 10px; /* Bordas arredondadas */
-        display: flex;
-        flex-direction: row; /* Organiza o conteúdo verticalmente */
-        align-items: center;
-        gap: 10px; /* Espaçamento entre elementos */
-        max-height: 300px; /* Define a altura máxima do conteúdo */
-    }
-
-    #service-image {
-        max-width: 210px; /* Reduz o tamanho da imagem */
-        height: auto;
-        border-radius: 8px; /* Bordas arredondadas */
-        margin-bottom: 10px; /* Espaço abaixo da imagem */
-    }
-
-    #service-title {
-        font-size: 1rem; /* Reduz o tamanho do título */
+    .pagina-index .intro-text p {
+        font-size: 1.05rem;
+        margin-top: 20px;
         text-align: center;
     }
 
-    #service-description {
-        font-size: 0.7rem; /* Ajusta o tamanho da descrição */
-        text-align: center;
+    .pagina-index .accordion {
+        padding-left: 0;
+        max-width: 100%;
+        min-width: unset;
+        width: 100%;
+        gap: 10px;
     }
 
-    #service-activities {
-        font-size: 0.7rem; /* Ajusta o tamanho da lista */
-        text-align: left; /* Mantém alinhado à esquerda */
+    .pagina-index .accordion-header {
+        font-size: 1rem;
+        padding: 14px 18px;
+    }
+
+    .pagina-index .accordion-toggle {
+        font-size: 1.2rem;
+    }
+
+    .pagina-index .tooltip-bubble {
+        position: static;
+        transform: none;
+        margin-top: 8px;
+        max-width: 100%;
+        padding: 12px 16px;
+        font-size: 0.9rem;
+        box-shadow: none;
+        background-color: #00e6e6;
+        color: #0a0a0a;
     }
 }
 
-/* Estilo para telas menores que 600px */
+/* Responsividade para smartphones */
 @media (max-width: 600px) {
-    #menu {
-        padding: 10px;
+    .pagina-index .servicos-section {
+        padding: 60px 16px;
+        margin-top: 60px;
     }
 
-    #menu .section-subtitle {
-        font-size: 1.8rem; /* Reduz ainda mais o tamanho */
-        margin-top: -70px;
-        margin-bottom: -50%;
+    .pagina-index .servicos-title {
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+        margin-top: -40px;
     }
 
-    #dishes-buttons {
-        flex-direction: column; /* Organiza os botões verticalmente */
-        gap: 15px;
+    .pagina-index .intro-text p {
+        font-size: 1rem;
+        margin-top: -30px;
     }
 
-    .dish-button {
-        width: 60px; /* Botões menores */
-        height: 60px;
-        font-size: 0.6rem;
+    .pagina-index .accordion-header {
+        font-size: 0.95rem;
+        padding: 15px 14px;
+        margin-top: -30px;
     }
 
-    #dishes-content {
-        width: 95%; /* Ocupa quase toda a largura */
-        max-height: 90%; /* Define a altura máxima do conteúdo */
-        display: flex;
-        flex-direction: column; /* Organiza em coluna */
-        align-items: center;
+    .pagina-index .accordion-toggle {
+        font-size: 1.1rem;
     }
 
+    .pagina-index .tooltip-bubble {
+        position: static;
+        transform: none;
+        margin-top: 8px;
+        max-width: 100%;
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        box-shadow: none;
+    }
 }
-
-

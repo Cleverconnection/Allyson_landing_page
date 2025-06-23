@@ -1,13 +1,14 @@
 header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 90px; /* navbar maior */
+    background: rgba(15, 15, 15, 0.95);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.8);
     display: flex;
-    width: 100%;
-    padding: 8px 8%; /* Padding ajustado */
-    position: sticky; /* Mantém o navbar fixo no topo */
-    top: 0;
-    background-color: #01000a;
-    backdrop-filter: blur(10px); /* Aplica desfoque no fundo */
-    z-index: 3; /* Garante que o navbar fique acima de outros elementos */
-    box-shadow: 0px 4px 6px rgba(170, 169, 169, 0.1); /* Sombra no navbar */
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    z-index: 10;
 }
 
 #navbar {
@@ -15,72 +16,152 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
 }
 
+/* Estrutura de 3 colunas */
+.nav-left, .nav-center, .nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-center {
+    justify-content: center;
+}
+
+.nav-right {
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* Nome da empresa */
 #nav_name {
-    background: white;
-    background-clip: text; /* Propriedade padrão */
-    -webkit-background-clip: text; /* Versão para navegadores WebKit */
-    -webkit-text-fill-color: transparent; /* Torna o texto transparente */
-    font-size: 2.9rem; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    margin-left: -5.5%;
-    padding: -1%; /* Padding ajustado */
-    display: flex; /* Organiza o logo e texto em linha */
-    align-items: center; /* Alinha verticalmente o texto e o logo */
-    gap: 5px; /* Espaçamento entre o logo e o texto */
+    position: absolute;
+    left: 40px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #5b5858;
+    user-select: none;
 }
 
-#nav_logo_small {
-    width: 75px; /* Ajuste o tamanho do logo */
-    height: auto; /* Mantém a proporção */
-    display: inline-block;
-    margin-right: -2%;
+/* Menu */
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+    margin-left: 100px;
 }
 
+/* Subtítulo (caso use) */
 #nav_subtitle {
     font-size: 1.2rem;
     margin-bottom: -5%;
 }
 
-#nav_list {
-    display: flex;
-    list-style: none;
-    gap: 48px;
-}
-
+/* Itens do menu */
 .nav-item a {
     text-decoration: none;
-    color: #94c2e0;
-    font-weight: 600;
+    color: #aaa;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px 0;
+    transition: color 0.25s ease;
+    font-family: 'Orbitron', sans-serif;
+    position: relative; /* Necessário para o sublinhado */
+}
+
+/* Cria o sublinhado animado */
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Posiciona o sublinhado no final do item */
+    left: 0;
+    width: 0; /* Começa com largura 0 */
+    height: 2px; /* Espessura do sublinhado */
+    background-color: #00ffea; /* Cor do sublinhado */
+    transition: width 0.3s ease; /* Anima a largura */
+}
+
+/* Expande o sublinhado ao passar o mouse */
+.nav-item a:hover::after {
+    width: 100%; /* Expande o sublinhado para 100% do item */
+}
+
+/* Efeito de hover e transformação */
+.nav-item:hover {
+    transform: scale(1.1); /* Menor escala para um efeito mais suave */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-item.active a {
     color: #94c2e0;
-    border-bottom: 3px solid var(--color-primary-4);
+    border-bottom: 3px solid var(--color-primary-4); /* Mantém a borda para quando o item estiver ativo */
 }
-.nav-item:hover {
-    transform: scale(1.25);
-    transition: color 0.3s ease, transform 0.3s ease;
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-color: #333;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(255, 253, 253, 0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
 }
+
+.btn-default:hover {
+    background-color: #00e6e6;
+    color: #0a0a0a;
+}
+
 
 #mobile_btn {
     display: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #94c2e0;
 }
 
+/* Menu Mobile */
 #mobile_menu {
     display: none;
 }
+
+#mobile_menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0px;
+}
+
+#mobile_nav_list .nav-item {
+    list-style: none;
+    text-align: center;
+}
+
 .hidden {
     display: none !important;
 }
 
 
 @media screen and (max-width: 1170px) {
-    #nav_list,
-    #navbar .btn-default {
-        display: none;
-    }
 
     #mobile_btn {
         display: block;
@@ -108,54 +189,15 @@ header {
         list-style: none;
         text-align: center;
     }
-    #nav_logo_small {
-        width: 75px; /* Ajuste o tamanho do logo */
-        height: auto; /* Mantém a proporção */
-        display: inline-block;
-        vertical-align: middle; /* Alinha o logo verticalmente com o texto */
-    }
-
-    #nav_logo_centered {
-        display: none; /* Inicialmente oculto */
-        position: absolute;
-        left: 40%;
-        transform: translateX(-50%);
-        width: 160px; /* Ajuste conforme o tamanho do seu logo */
-        height: auto;
-    }
-
-    #nav_logo_centered {
-        display: block;
-    }
 }
 
 @media screen and (max-width: 600px) {
 
-    #nav_logo_small {
-        width: 55px; /* Ajuste o tamanho do logo */
-        height: auto; /* Mantém a proporção */
-        display: inline-block;
-        vertical-align: middle; /* Alinha o logo verticalmente com o texto */
-    }
-
-    #nav_logo_centered {
-        display: none; /* Inicialmente oculto */
-        position: absolute;
-        left: 40%;
-        transform: translateX(-50%);
-        width: 160px; /* Ajuste conforme o tamanho do seu logo */
-        height: auto;
-    }
-
-    #nav_logo_centered {
-        display: block;
-    }
-
     #nav_subtitle {
-        font-size: 1.1rem;
-        margin-bottom: -3%;
+    font-size: 1.1rem;
+    margin-bottom: -3%;
     }
-    #nav_name{
+    #nav_name {
         font-size: 1.9rem;
         width: 100%;
 
