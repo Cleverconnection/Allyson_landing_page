@@ -6,7 +6,7 @@ header {
     box-shadow: 0 1px 8px rgba(0,0,0,0.8);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 20px;
     z-index: 10;
 }
@@ -17,7 +17,6 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 16px;
 }
 
 /* Estrutura de 3 colunas */
@@ -123,83 +122,61 @@ header {
     color: #0a0a0a;
 }
 
-
-#mobile_btn {
-    display: none;
-    border: none;
-    background-color: transparent;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #94c2e0;
-}
-
-/* Menu Mobile */
-#mobile_menu {
-    display: none;
-}
-
-#mobile_menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#mobile_nav_list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: 12px 0px;
-}
-
-#mobile_nav_list .nav-item {
-    list-style: none;
-    text-align: center;
-}
-
-.hidden {
-    display: none !important;
-}
-
-
+/* Estilos para responsividade */
 @media screen and (max-width: 1170px) {
 
-    #mobile_btn {
-        display: block;
-        border: none;
-        background-color: transparent;
+
+    #navbar {
+        justify-content: space-between;
+    }
+
+    #nav_list {
+        display: none; /* Esconde o menu no mobile */
+    }
+
+    #nav_name {
         font-size: 1.5rem;
-        cursor: pointer;
-        color: #94c2e0;
-    }
-
-    #mobile_menu.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #mobile_nav_list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 12px 0px;
-    }
-
-    #mobile_nav_list .nav-item {
-        list-style: none;
-        text-align: center;
+        left: 20px;
     }
 }
 
+/* Ajustes responsivos para telas menores de 600px */
 @media screen and (max-width: 600px) {
-
-    #nav_subtitle {
-    font-size: 1.1rem;
-    margin-bottom: -3%;
+    #home {
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px;
+        margin-top: 40px;
     }
-    #nav_name {
-        font-size: 1.9rem;
-        width: 100%;
 
+    #navbar {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #nav_list {
+        display: flex; /* Esconde o menu */
+        gap: 20px;
+        margin-left: -20px;
+        margin-top: -10px;
+       
+    }
+    .nav-item a {
+        color: #aaa;
+        font-size: 0.8rem;
+        transition: color 0.25s ease;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    #nav_name {
+        position: relative;
+        left: 0;
+        font-size: 1.7rem;
+        margin-top: 20px;
+        letter-spacing: initial;
+    }
+
+    .btn-default {
+        display: none;
     }
 }

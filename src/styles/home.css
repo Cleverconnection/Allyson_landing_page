@@ -16,345 +16,276 @@
 
 /* Ajusta o container do banner */
 #home {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    position: relative;
-    color: white;
-    padding: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  position: relative;
+  color: white;
+  padding: 5%;
 }
 
 /* Ajusta a coluna de informações */
 #left-side {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-right: 20px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 20px;
 }
 
 /* Ajusta a coluna de vídeo */
 #right-side {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    max-width: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 650px;
 }
 
 /* Ajustes do vídeo para se ajustar corretamente à tela */
 #cybersecurity-video {
-    position: relative;
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    border-radius: 15px;
-    opacity: 0.9;
-    box-shadow: 0 0 15px 5px rgba(2, 2, 2, 0.8); /* Efeito neon */
-    background-color: #121212;
-    transition: all 0.3s ease-in-out;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 15px;
+  opacity: 0.9;
+  box-shadow: 0 0 15px 5px rgba(2, 2, 2, 0.8); /* Efeito neon */
+  background-color: #121212;
+  transition: all 0.3s ease-in-out;
 }
 
 #cybersecurity-video:hover {
-    box-shadow: 0 0 30px 0.5px #00e6e6; /* Efeito de brilho no hover */
+  box-shadow: 0 0 30px 0.5px #00e6e6; /* Efeito de brilho no hover */
 }
-
 
 /* Ajustando o texto sobre o vídeo */
 .image-overlay {
-    position: relative;
-    display: inline-block;
-    border-radius: 20px; /* Borda suave também no container */
+  position: relative;
+  display: inline-block;
+  border-radius: 20px; /* Borda suave também no container */
 }
-
 
 /* Ajustando o texto sobre o vídeo */
 .text-overlay h2 {
-    position: absolute;
-    top: 5%; /* Coloca o texto "Cibersegurança" sobre o vídeo */
-    font-family: 'Orbitron', sans-serif;
-    left: 66%;
-    transform: translateX(-80%);
-    text-align: center;
-    color: #a09d9d;
-    background-color: transparent; /* Remove o fundo escuro */
-    letter-spacing: 6px; /* Ajuste esse valor conforme necessário */
-    
+  position: absolute;
+  top: 5%; /* Coloca o texto "Cibersegurança" sobre o vídeo */
+  font-family: 'Orbitron', sans-serif;
+  left: 66%;
+  transform: translateX(-80%);
+  text-align: center;
+  color: #a09d9d;
+  background-color: transparent; /* Remove o fundo escuro */
+  letter-spacing: 6px; /* Ajuste esse valor conforme necessário */
 }
 
 /* Estilo para o título sobre o vídeo */
 .text-overlay p {
-    position: absolute;
-    font-size: 1rem;
-    color: #a09d9d;
-    font-family: 'Orbitron', sans-serif;
-    text-align: center;
-     top: 85%; /* Coloca o texto "Cibersegurança" sobre o vídeo */
+  position: absolute;
+  font-size: 1rem;
+  color: #a09d9d;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  top: 85%; /* Coloca o texto "Cibersegurança" sobre o vídeo */
 }
 
 /* Botão de "Saiba Mais" */
 #info .btn-default {
-    background-color: #333;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 #info .btn-default:hover {
-    transform: scale(1.05);
-    background-color: #555;
+  transform: scale(1.05);
+  background-color: #555;
 }
 
 /* Estiliza o conteúdo do banner */
 #cta {
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    width: 50%; /* Aumenta a largura da coluna para permitir mais espaço */
-    max-width: 800px; /* Limita a largura máxima da coluna */
-    align-items: flex-start;
-    justify-content: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 50%; /* Aumenta a largura da coluna para permitir mais espaço */
+  max-width: 800px; /* Limita a largura máxima da coluna */
+  align-items: flex-start;
+  justify-content: center;
 }
 
 /* Ajustes para centralizar o título e a descrição */
 #cta .title {
-    font-size: 4.1rem;
-    font-family: 'Orbitron', sans-serif;
-    color: white;
-    text-align: left;
+  font-size: 4.1rem;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-align: left;
 }
 
 /* Estiliza a descrição */
 #cta .description {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    color: #f0f0f0;
-    text-align: left;
-    max-width: 750px; /* Limita a largura da descrição */
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #f0f0f0;
+  text-align: left;
+  max-width: 750px; /* Limita a largura da descrição */
 }
 
 /* Destaque para o texto em span */
 #cta .title span {
-    color: #333;
+  color: #333;
 }
 
 /* Ajustes dos botões das redes sociais */
 .social-media-buttons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 40px;
-    background-color: #222222;  /* Preto suave */
-    font-size: 1.25rem;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #f0f0f0;  /* Texto claro */
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
-    transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 40px;
+  background-color: #222222;  /* Preto suave */
+  font-size: 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #f0f0f0;  /* Texto claro */
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 /* Efeito de hover para os ícones sociais */
 .social-media-buttons a:hover {
-    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.2);
-    background-color: #333333; /* Fundo mais escuro no hover */
+  box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
+  background-color: #333333; /* Fundo mais escuro no hover */
 }
 
 .social-media-buttons a:nth-child(1):hover {
-    background-color: #18a34b;
-    color: white;
+  background-color: #18a34b;
+  color: white;
 }
 
 .social-media-buttons a:nth-child(2):hover {
-    background-color: #0e4081;
-    color: white;
+  background-color: #0e4081;
+  color: white;
 }
 
 /* Botão flutuante do WhatsApp */
 #whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #222222; /* Fundo mais escuro */
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #222222; /* Fundo mais escuro */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
 }
 
 #whatsapp-button a {
-    color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 #whatsapp-button.show {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Oculta slider em telas maiores */
 #service-titles-slider {
-    display: none;
+  display: none;
 }
 
-/* Ajustes responsivos para o tablet */
+/* Ajustes responsivos para telas menores de 1170px */
 @media screen and (max-width: 1170px) {
-    #home {
-        min-height: 100%;
-        padding-top: 0px;
-    }
+  #home {
+    min-height: 100%;
+    padding-top: 0px;
+  }
 
-    #banner,
-    #banner img,
-    #cta {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-    }
+  #banner,
+  #banner img,
+  #cta {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
 }
 
-/* Ajustes responsivos para o mobile */
+/* Ajustes responsivos para dispositivos móveis com largura de até 600px */
 @media screen and (max-width: 600px) {
-    #home {
-        flex-direction: column;
-        padding: 100px;
-        text-align: center;
-        min-height: 70vh;
-        background-color: #000014; /* sem imagem */
-    }
+  /* Ajusta o layout para uma coluna */
+  #home {
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+  }
 
-    #cta {
-        width: 150%;
-        gap: 40px;
-        align-items: center;
-    }
+  #left-side, #right-side {
+    width: 100%;
+    padding: 0;
+  }
 
-    #cta .title {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
+  /* Ajusta os títulos e o conteúdo */
+  #cta .title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 
-    #cta .description {
-        font-size: 0.8rem;
-        line-height: 1.6;
-    }
+  #cta .description {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 
-    #cta_buttons {
-        flex-direction: column;
-        gap: 10px;
-        width: 80%;
-    }
+  /* Ajusta o vídeo */
+  #cybersecurity-video {
+    max-width: 100%;
+    margin-top: 20px;
+  }
 
-    #cta_buttons a {
-        width: 100%;
-        font-size: 0.9rem;
-        padding: 12px;
-    }
+  /* Ajusta o botão flutuante para aparecer */
+  #whatsapp-button {
+    opacity: 1;
+    visibility: visible;
+    bottom: 10px;
+    left: 10px;
+  }
 
-    #phone_button {
-        flex-direction: column;
-        gap: 5px;
-        font-size: 0.9rem;
-        width: 100%;
-        text-align: center;
-    }
+  /* Ajustes para os botões sociais */
+  .social-media-buttons a {
+    width: 40px;
+    height: 35px;
+    font-size: 1.1rem;
+  }
 
-    .social-media-buttons {
-        justify-content: center;
-        gap: 12px;
-    }
+  /* Ajuste do título sobre o vídeo */
+  .text-overlay h2 {
+    font-size: 1.5rem;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-    .social-media-buttons a {
-        font-size: 1.2rem;
-    }
-
-    #whatsapp-button {
-        width: 50px;
-        height: 50px;
-        bottom: 15px;
-        left: 15px;
-    }
-
-    #whatsapp-button a {
-        font-size: 1.2rem;
-    }
-
-    #service-titles-slider {
-        position: relative;
-        width: 120%;
-        height: 40px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    .service-title-text {
-        position: absolute;
-        font-size: 1.1rem;
-        color: white;
-        white-space: nowrap;
-        opacity: 0;
-        transform: translateX(-100%);
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                     0 0 20px rgba(255, 255, 255, 0.6),
-                     0 0 30px rgba(255, 255, 255, 0.4);
-    }
-
-    .service-title-text.active {
-        opacity: 1;
-        transform: translateX(0);
-        animation: slideInOut 4s ease-in-out, glow 1.5s infinite alternate;
-    }
-
-    @keyframes slideInOut {
-        0% {
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-        20% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        80% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        100% {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-    }
-
-    @keyframes glow {
-        0% {
-            text-shadow: 0 0 10px rgba(42, 33, 204, 0.8),
-                         0 0 20px rgba(45, 20, 156, 0.986),
-                         0 0 30px rgba(255, 255, 255, 0.4);
-        }
-        100% {
-            text-shadow: 0 0 15px rgb(58, 22, 186),
-                         0 0 25px rgba(36, 60, 213, 0.8),
-                         0 0 35px rgba(12, 191, 215, 0.6);
-        }
-    }
+  /* Ajuste do texto sobre o vídeo */
+  .text-overlay p {
+    font-size: 0.9rem;
+    top: 80%;
+  }
 }
