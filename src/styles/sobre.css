@@ -14,10 +14,10 @@
 .pagina-index .sobre-title {
   font-size: 2.5rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 2px;
-  color: #aaa;
+  text-transform: uppercase;
   text-align: center;
+  color: #aaa;
   text-shadow: 0 0 5px rgba(91, 88, 88, 0.6);
   margin-top: -22px;
 }

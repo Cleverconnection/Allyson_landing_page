@@ -234,3 +234,48 @@ $(document).ready(function () {
 
     rotateServiceTitles();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("ambient-dots-bg");
+  const ctx = canvas.getContext("2d");
+
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
+
+  const dots = Array.from({ length: 100 }, () => ({
+    x: Math.random() * width,
+    y: Math.random() * height,
+    r: Math.random() * 2 + 1,
+    dx: Math.random() * 0.5 - 0.25,
+    dy: Math.random() * 0.5 - 0.25,
+  }));
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    dots.forEach(dot => {
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, dot.r, 0, 2 * Math.PI);
+      ctx.fillStyle = "rgba(0,255,255,0.15)";
+      ctx.fill();
+
+      dot.x += dot.dx;
+      dot.y += dot.dy;
+
+      if (dot.x < 0 || dot.x > width) dot.dx *= -1;
+      if (dot.y < 0 || dot.y > height) dot.dy *= -1;
+    });
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  window.addEventListener("resize", () => {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+  });
+});
+

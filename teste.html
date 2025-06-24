@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cyber FX - Abstratos</title>
+  <title>Cyber FX Suave 2</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background: #000;
       overflow: hidden;
+      background: #0b0b0b;
     }
     canvas.fx {
       position: absolute;
@@ -22,19 +22,17 @@
       position: fixed;
       top: 10px;
       right: 10px;
-      background: rgba(0,0,0,0.7);
+      z-index: 999;
+      background: rgba(0,0,0,0.6);
       padding: 10px;
       border: 1px solid #0ff;
-      z-index: 1000;
     }
     #controls button {
-      display: block;
-      margin: 5px 0;
-      width: 240px;
-      padding: 4px;
       background: #000;
       color: #0ff;
       border: 1px solid #0ff;
+      margin: 5px 0;
+      width: 240px;
       cursor: pointer;
       font-family: monospace;
     }
@@ -47,145 +45,164 @@
 <body>
 
 <div id="controls">
-  <button onclick="toggleEffect('glitch3d')">Toggle Glitch 3D</button>
-  <button onclick="toggleEffect('plasma')">Toggle Neural Plasma</button>
-  <button onclick="toggleEffect('fractal')">Toggle Fractal Grid</button>
-  <button onclick="toggleEffect('orbit')">Toggle Orbit Points</button>
-  <button onclick="toggleEffect('wires')">Toggle Wire Sparks</button>
+  <button onclick="toggleEffect('wave')">Toggle Soft Wave Pattern</button>
+  <button onclick="toggleEffect('dots')">Toggle Ambient Dots</button>
+  <button onclick="toggleEffect('linescroll')">Toggle Vertical Lines</button>
+  <button onclick="toggleEffect('starfield')">Toggle Starfield Drift</button>
+  <button onclick="toggleEffect('circuits')">Toggle Circuit Pulse</button>
 </div>
 
-<canvas id="glitch3d" class="fx"></canvas>
-<canvas id="plasma" class="fx"></canvas>
-<canvas id="fractal" class="fx"></canvas>
-<canvas id="orbit" class="fx"></canvas>
-<canvas id="wires" class="fx"></canvas>
+<canvas id="wave" class="fx"></canvas>
+<canvas id="dots" class="fx"></canvas>
+<canvas id="linescroll" class="fx"></canvas>
+<canvas id="starfield" class="fx"></canvas>
+<canvas id="circuits" class="fx"></canvas>
 
 <script>
-  const canvases = {};
-  const intervals = {};
+const canvases = {};
+const intervals = {};
+const effects = {};
 
-  function setupCanvas(id) {
-    const canvas = document.getElementById(id);
-    canvases[id] = canvas;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+function setupCanvas(id) {
+  const canvas = document.getElementById(id);
+  canvases[id] = canvas;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.style.display = 'none';
+}
+
+function toggleEffect(id) {
+  const canvas = canvases[id];
+  if (canvas.style.display === 'none') {
+    canvas.style.display = 'block';
+    effects[id]();
+  } else {
     canvas.style.display = 'none';
+    clearInterval(intervals[id]);
   }
+}
 
-  function toggleEffect(id) {
-    const canvas = canvases[id];
-    if (canvas.style.display === 'none') {
-      canvas.style.display = 'block';
-      effects[id]();
-    } else {
-      canvas.style.display = 'none';
-      clearInterval(intervals[id]);
-    }
+window.addEventListener('resize', () => {
+  for (let id in canvases) {
+    canvases[id].width = window.innerWidth;
+    canvases[id].height = window.innerHeight;
   }
+});
 
-  window.addEventListener('resize', () => {
-    for (let id in canvases) {
-      const c = canvases[id];
-      c.width = window.innerWidth;
-      c.height = window.innerHeight;
+// Wave Pattern
+effects['wave'] = () => {
+  const ctx = canvases.wave.getContext('2d');
+  let t = 0;
+  intervals.wave = setInterval(() => {
+    ctx.clearRect(0, 0, canvases.wave.width, canvases.wave.height);
+    ctx.strokeStyle = '#0ff2';
+    ctx.beginPath();
+    for (let x = 0; x < canvases.wave.width; x += 2) {
+      const y = canvases.wave.height / 2 + Math.sin(x * 0.01 + t) * 30;
+      ctx.lineTo(x, y);
     }
-  });
+    ctx.stroke();
+    t += 0.05;
+  }, 30);
+};
 
-  const effects = {
-    glitch3d: () => {
-      const ctx = canvases.glitch3d.getContext('2d');
-      intervals.glitch3d = setInterval(() => {
-        ctx.fillStyle = '#000';
-        ctx.fillRect(0, 0, canvases.glitch3d.width, canvases.glitch3d.height);
-        for (let i = 0; i < 20; i++) {
-          const y = Math.random() * canvases.glitch3d.height;
-          ctx.fillStyle = `rgb(${Math.random()*255},255,255)`;
-          ctx.fillRect(0, y, canvases.glitch3d.width, 2);
-        }
-      }, 80);
-    },
+// Ambient Dots
+effects['dots'] = () => {
+  const ctx = canvases.dots.getContext('2d');
+  const dots = Array.from({ length: 100 }, () => ({
+    x: Math.random() * canvases.dots.width,
+    y: Math.random() * canvases.dots.height,
+    r: Math.random() * 2 + 1,
+    dx: Math.random() * 0.5 - 0.25,
+    dy: Math.random() * 0.5 - 0.25
+  }));
+  intervals.dots = setInterval(() => {
+    ctx.clearRect(0, 0, canvases.dots.width, canvases.dots.height);
+    dots.forEach(dot => {
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, dot.r, 0, 2 * Math.PI);
+      ctx.fillStyle = 'rgba(0,255,255,0.3)';
+      ctx.fill();
+      dot.x += dot.dx;
+      dot.y += dot.dy;
+      if (dot.x < 0 || dot.x > canvases.dots.width) dot.dx *= -1;
+      if (dot.y < 0 || dot.y > canvases.dots.height) dot.dy *= -1;
+    });
+  }, 40);
+};
 
-    plasma: () => {
-      const ctx = canvases.plasma.getContext('2d');
-      let t = 0;
-      intervals.plasma = setInterval(() => {
-        const w = canvases.plasma.width;
-        const h = canvases.plasma.height;
-        const img = ctx.createImageData(w, h);
-        for (let i = 0; i < img.data.length; i += 4) {
-          const x = ((i/4) % w);
-          const y = Math.floor((i/4) / w);
-          const value = Math.floor(128 + 128 * Math.sin(x/20 + t) * Math.sin(y/30 + t));
-          img.data[i] = 0;
-          img.data[i+1] = value;
-          img.data[i+2] = 255;
-          img.data[i+3] = 255;
-        }
-        ctx.putImageData(img, 0, 0);
-        t += 0.05;
-      }, 50);
-    },
+// Vertical Lines
+effects['linescroll'] = () => {
+  const ctx = canvases.linescroll.getContext('2d');
+  const lines = Array.from({ length: 40 }, () => ({
+    x: Math.random() * canvases.linescroll.width,
+    y: Math.random() * canvases.linescroll.height
+  }));
+  intervals.linescroll = setInterval(() => {
+    ctx.clearRect(0, 0, canvases.linescroll.width, canvases.linescroll.height);
+    ctx.strokeStyle = 'rgba(0,255,255,0.1)';
+    lines.forEach(line => {
+      ctx.beginPath();
+      ctx.moveTo(line.x, line.y);
+      ctx.lineTo(line.x, line.y + 40);
+      ctx.stroke();
+      line.y += 2;
+      if (line.y > canvases.linescroll.height) line.y = -40;
+    });
+  }, 30);
+};
 
-    fractal: () => {
-      const ctx = canvases.fractal.getContext('2d');
-      let shift = 0;
-      intervals.fractal = setInterval(() => {
-        ctx.clearRect(0, 0, canvases.fractal.width, canvases.fractal.height);
-        ctx.strokeStyle = '#0ff';
-        ctx.lineWidth = 1;
-        for (let y = 0; y < canvases.fractal.height; y += 20) {
-          ctx.beginPath();
-          for (let x = 0; x < canvases.fractal.width; x += 10) {
-            const val = Math.sin((x + shift)/30) * 20;
-            ctx.lineTo(x, y + val);
-          }
-          ctx.stroke();
-        }
-        shift += 2;
-      }, 40);
-    },
+// Starfield
+effects['starfield'] = () => {
+  const ctx = canvases.starfield.getContext('2d');
+  const stars = Array.from({ length: 150 }, () => ({
+    x: Math.random() * canvases.starfield.width,
+    y: Math.random() * canvases.starfield.height,
+    s: Math.random() * 1.5 + 0.5
+  }));
+  intervals.starfield = setInterval(() => {
+    ctx.fillStyle = 'rgba(0,0,0,0.1)';
+    ctx.fillRect(0, 0, canvases.starfield.width, canvases.starfield.height);
+    ctx.fillStyle = '#0ff';
+    stars.forEach(star => {
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.s, 0, 2 * Math.PI);
+      ctx.fill();
+      star.y += star.s * 0.2;
+      if (star.y > canvases.starfield.height) {
+        star.x = Math.random() * canvases.starfield.width;
+        star.y = 0;
+      }
+    });
+  }, 40);
+};
 
-    orbit: () => {
-      const ctx = canvases.orbit.getContext('2d');
-      let angle = 0;
-      intervals.orbit = setInterval(() => {
-        ctx.clearRect(0, 0, canvases.orbit.width, canvases.orbit.height);
-        const cx = canvases.orbit.width / 2;
-        const cy = canvases.orbit.height / 2;
-        ctx.fillStyle = '#0ff';
-        for (let i = 0; i < 12; i++) {
-          const a = angle + i * (Math.PI * 2 / 12);
-          const x = cx + Math.cos(a) * 150;
-          const y = cy + Math.sin(a) * 150;
-          ctx.beginPath();
-          ctx.arc(x, y, 6, 0, Math.PI * 2);
-          ctx.fill();
-        }
-        angle += 0.05;
-      }, 30);
-    },
-
-    wires: () => {
-      const ctx = canvases.wires.getContext('2d');
-      intervals.wires = setInterval(() => {
-        ctx.fillStyle = 'rgba(0,0,0,0.1)';
-        ctx.fillRect(0, 0, canvases.wires.width, canvases.wires.height);
-        ctx.strokeStyle = '#00ffff';
-        ctx.beginPath();
-        let x = Math.random() * canvases.wires.width;
-        let y = Math.random() * canvases.wires.height;
-        ctx.moveTo(x, y);
-        for (let i = 0; i < 10; i++) {
-          x += (Math.random() - 0.5) * 100;
-          y += (Math.random() - 0.5) * 100;
-          ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-      }, 80);
+// Circuit Pulse
+effects['circuits'] = () => {
+  const ctx = canvases.circuits.getContext('2d');
+  let step = 0;
+  intervals.circuits = setInterval(() => {
+    ctx.clearRect(0, 0, canvases.circuits.width, canvases.circuits.height);
+    ctx.strokeStyle = '#0ff3';
+    for (let i = 0; i < canvases.circuits.width; i += 60) {
+      ctx.beginPath();
+      ctx.moveTo(i, 0);
+      ctx.lineTo(i, canvases.circuits.height);
+      ctx.stroke();
     }
-  };
+    for (let j = 0; j < canvases.circuits.height; j += 60) {
+      ctx.beginPath();
+      ctx.moveTo(0, j);
+      ctx.lineTo(canvases.circuits.width, j);
+      ctx.stroke();
+    }
+    ctx.fillStyle = 'rgba(0,255,255,0.4)';
+    ctx.fillRect((step % (canvases.circuits.width / 60)) * 60, (step % (canvases.circuits.height / 60)) * 60, 4, 4);
+    step++;
+  }, 60);
+};
 
-  ['glitch3d', 'plasma', 'fractal', 'orbit', 'wires'].forEach(setupCanvas);
+['wave', 'dots', 'linescroll', 'starfield', 'circuits'].forEach(setupCanvas);
 </script>
 </body>
 </html>
