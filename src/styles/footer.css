@@ -1,131 +1,129 @@
-footer {
-    background-color: #0a0a0a;
-    padding: 20px 0;
-    color: #dcdcdc;
+.pagina-index .cyber-footer {
+  color: #cccccc6c;
+  padding: 40px 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  position: relative;
+  z-index: 5;
 }
 
-#footer_items {
-    display: flex;
-    flex-direction: column; /* Coluna para melhor organização vertical */
-    align-items: center;
-    gap: 20px; /* Espaço entre os blocos (links, ícones, copyright) */
-    padding: 10px 5%;
-    text-align: center;
+.pagina-index .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* COPYRIGHT */
-#copyright {
-    color: #aaaaaa;
-    font-weight: 300;
-    font-size: 0.85rem;
-    margin-top: 10px;
+.pagina-index .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* LINKS */
-#footer_links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.pagina-index .footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
 }
 
-#footer_links a {
-    color: #82f95b;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
+.pagina-index .footer-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00d4bb;
+  transition: width 0.3s ease;
 }
 
-#footer_links a:hover {
-    text-decoration: underline;
-    color: #b7ff8a;
+.pagina-index .footer-links a:hover,
+.pagina-index .footer-links a:focus {
+  color: #00e6e6;
 }
 
-/* SOCIAL MEDIA ICONS */
-#footer_items .social-media-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
+.pagina-index .footer-links a:hover::after,
+.pagina-index .footer-links a:focus::after {
+  width: 100%;
 }
 
-#footer_items .social-media-buttons a {
-    background-color: #222;
-    color: #fff;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+.pagina-index .footer-info p {
+  margin: 5px 0;
+  color: #888;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
 }
 
-#footer_items .social-media-buttons a:hover {
-    background-color: #00e6e6;
-    color: #0a0a0a;
-    transform: scale(1.1);
+.pagina-index .footer-social {
+  display: flex;
+  gap: 16px;
 }
 
+.pagina-index .footer-social a {
+  color: #aaa;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
 
-@media screen and (max-width: 600px) {
-    footer {
-        background-color: #0f0f0f; /* Fundo ainda mais escuro no mobile */
-    }
+.pagina-index .footer-social a:hover {
+  color: #00d4bb;
+  transform: translateY(-2px) scale(1.1);
+}
 
-    #footer_items {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        gap: 15px;
-    }
+.pagina-index .footer-legal {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 10px;
+}
 
-    #copyright {
-        font-size: 0.7rem;
-        color: #aaa;
-        margin-left: 0;
+.pagina-index .footer-legal a {
+  color: #777;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.pagina-index .footer-legal a:hover {
+  color: #00d4bb;
+}
+
+/* Ajustes para smartphones */
+@media (max-width: 600px) {
+    .pagina-index .cyber-footer {
+        padding: 30px 16px;
+        font-size: 0.70rem;
         text-align: center;
-        width: 100%;
     }
 
-    #footer_links {
-        display: flex;
-        margin-left: 30px;
-        margin-bottom: 0;
-        gap: 8px;
+    .pagina-index .footer-container {
+        gap: 16px;
     }
 
-    #footer_links a {
-        color: #00e6e6; /* Verde claro visível no fundo escuro */
-        font-size: 0.85rem; 
+    .pagina-index .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
-    #footer_links a:hover {
-        text-decoration: underline;
+    .pagina-index .footer-links a {
+        font-size: 0.85rem;
     }
 
-    #footer_items .social-media-buttons {
-        margin-left: 0;
-        margin-top: 10px;
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        width: 100%;
+    .pagina-index .footer-info p {
+        font-size: 0.8rem;
     }
 
-    #footer_items .social-media-buttons a {
-        background-color: #222;
-        color: #fff;
-        border-radius: 8px;
-        padding: 6px;
-        transition: background-color 0.3s ease;
+    .pagina-index .footer-social a {
+        font-size: 1rem;
     }
 
-    #footer_items .social-media-buttons a:hover {
-        background-color: #00e6e6;
-        color: #0a0a0a;
+    .pagina-index .footer-legal {
+        font-size: 0.7rem;
     }
 }
-

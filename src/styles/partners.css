@@ -1,17 +1,23 @@
-#partners {
+.pagina-index #partners {
+    color: #ddd;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 5;
+    position: relative;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 50px 20px;
-    background: linear-gradient(to bottom, #000000, #1c1c1c);
-    color: white;
     text-align: center;
-    min-height: 80vh;
+    min-height: 600px;
+}
+.pagina-index #partners {
+    scroll-margin-top: 100px; /* ajuste conforme a altura da navbar + margem */
 }
 
-/* Wrapper para exibir parceiros e clientes lado a lado */
-#partners-clients-wrapper {
+
+.pagina-index #partners-clients-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -19,35 +25,42 @@
     max-width: 1200px;
     width: 100%;
 }
-/* Estilização de cada seção (parceiros e clientes) */
-.partners-clients-section {
+
+.pagina-index .partners-clients-section {
     flex: 1;
     max-width: 500px;
     text-align: center;
 }
 
-/* Títulos */
-#partners .section-title {
+.pagina-index #partners .section-title {
+    width: 100%;
+    margin-top: -40px;
+    color: #aaa;
     font-size: 2.5rem;
-    margin-bottom: 20px;
-    margin-top: 3%;
+    font-weight: 700;
     text-transform: uppercase;
-    animation: fadeIn 2s ease;
-    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 60px;
+    text-shadow: 0 0 5px rgba(91, 88, 88, 0.6);
 }
 
-#partners .section-subtitle {
-    font-size: 1.3rem; /* Ajusta o tamanho para melhor responsividade */
-    font-family: 'Poppins', sans-serif; /* Fonte profissional */
-    font-weight: 400; /* Traz um visual mais leve e sofisticado */
-    color: rgba(247, 245, 245, 0.85); /* Tom levemente mais suave */
-    letter-spacing: 1px; /* Melhora o espaçamento entre letras */
-    text-transform: uppercase; /* Para um visual mais moderno */
+.pagina-index #servicos {
+    scroll-margin-top: 90px;
+}
+
+.pagina-index #partners .section-subtitle {
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: rgba(247, 245, 245, 0.85);
+    letter-spacing: 1px;
+    text-transform: uppercase;
     margin-bottom: 40px;
     margin-top: 15%;
 }
 
-.logos-container {
+.pagina-index .logos-container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -56,17 +69,16 @@
     padding: 20px;
 }
 
-.partner-logo {
+.pagina-index .partner-logo {
     width: 100px;
     height: auto;
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
 }
 
-/* Animação das imagens */
-.partner-logo:nth-child(1) { animation-delay: 0.5s; }
-.partner-logo:nth-child(2) { animation-delay: 1s; }
-.partner-logo:nth-child(3) { animation-delay: 1.5s; }
+.pagina-index .partner-logo:nth-child(1) { animation-delay: 0.5s; }
+.pagina-index .partner-logo:nth-child(2) { animation-delay: 1s; }
+.pagina-index .partner-logo:nth-child(3) { animation-delay: 1.5s; }
 
 @keyframes fadeIn {
     from {
@@ -79,72 +91,70 @@
     }
 }
 
-
 /* Estilo para telas menores que 1170px */
 @media (max-width: 1170px) {
-    #partners {
-        padding: 20px; /* Reduz o padding geral */
-        text-align: center; /* Centraliza o texto */
+    .pagina-index #partners {
+        padding: 20px;
+        text-align: center;
     }
 
-    #partners-content {
-        margin: 5% auto; /* Reduz o espaçamento vertical */
-        max-width: 90%; /* Ajusta a largura */
+    .pagina-index #partners-content {
+        margin: 5% auto;
+        max-width: 90%;
     }
 
-    #partners .section-title {
-        font-size: 2rem; /* Reduz o tamanho do título */
-        margin-bottom: 15px; /* Diminui o espaçamento inferior */
+    .pagina-index #partners .section-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
     }
 
-    #partners .section-subtitle {
-        font-size: 1.2rem; /* Reduz o tamanho do subtítulo */
-        margin-bottom: 50px; /* Diminui o espaçamento inferior */
+    .pagina-index #partners .section-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 50px;
     }
 
-    #logos-container {
-        gap: 15px; /* Reduz o espaçamento entre as logos */
-        padding: 10px; /* Ajusta o padding */
+    .pagina-index #logos-container {
+        gap: 15px;
+        padding: 10px;
     }
 
-    .partner-logo {
-        width: 80px; /* Diminui o tamanho das logos */
+    .pagina-index .partner-logo {
+        width: 80px;
         height: auto;
     }
 }
 
 /* Estilo para telas menores que 600px */
 @media (max-width: 600px) {
-    #partners {
-        padding: 15px; /* Ajusta o padding geral */
-        min-height: auto; /* Remove a altura mínima */
+    .pagina-index #partners {
+        padding: 15px;
+        min-height: auto;
     }
 
-    #partners-content {
-        margin: 5% auto; /* Reduz o espaçamento */
-        max-width: 100%; /* Ocupa toda a largura */
+    .pagina-index #partners-content {
+        margin: 5% auto;
+        max-width: 100%;
     }
 
-    #partners .section-title {
-        font-size: 1.5rem; /* Reduz ainda mais o título */
-        margin-bottom: 10px; /* Ajusta o espaçamento inferior */
+    .pagina-index #partners .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
         color: #ffffff;
     }
 
-    #partners .section-subtitle {
-        font-size: 1rem; /* Ajusta o subtítulo */
-        margin-bottom: 30px; /* Ajusta o espaçamento inferior */
+    .pagina-index #partners .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 
-    #logos-container {
-        flex-wrap: wrap; /* Permite quebras de linha */
-        gap: 10px; /* Diminui o espaçamento */
-        justify-content: center; /* Centraliza os elementos */
+    .pagina-index #logos-container {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
     }
 
-    .partner-logo {
-        width: 60px; /* Reduz ainda mais o tamanho das logos */
+    .pagina-index .partner-logo {
+        width: 60px;
         height: auto;
     }
 }
-    

@@ -1,15 +1,15 @@
-#contact {
+.pagina-index #contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 110vh;
-    background-color: #1c1c1c; /* Fundo mais escuro geral */
+    background-color: rgba(10, 10, 10, 0.6);
     padding: 50px 20px;
     color: #eee;
 }
 
-#contact-content {
+.pagina-index #contact-content {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -17,36 +17,38 @@
     width: 100%;
 }
 
-#contact-form, #contact-info {
+.pagina-index #contact-form,
+.pagina-index #contact-info {
     width: 48%;
     padding: 20px;
-    background: #121212; /* Fundo escuro do card */
+    background: #121212;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     color: #e0e0e0;
 }
 
-#contact-form h2, #contact-info h2 {
+.pagina-index #contact-form h2,
+.pagina-index #contact-info h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     text-align: left;
     color: #ffffff;
 }
 
-.form-group {
+.pagina-index .form-group {
     margin-bottom: 20px;
 }
 
-.form-group label {
+.pagina-index .form-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
-    color: #ccc; /* Labels claras */
+    color: #ccc;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
+.pagina-index .form-group input,
+.pagina-index .form-group textarea {
+    width: 95%;
     padding: 10px;
     background-color: #1f1f1f;
     border: 1px solid #555;
@@ -55,11 +57,11 @@
     color: #f2f2f2;
 }
 
-textarea {
+.pagina-index textarea {
     resize: none;
 }
 
-#contact-info p {
+.pagina-index #contact-info p {
     margin-bottom: 15px;
     font-size: 1rem;
     line-height: 1.5;
@@ -69,12 +71,12 @@ textarea {
     color: #d0d0d0;
 }
 
-#contact-info i {
+.pagina-index #contact-info i {
     color: #4A90E2;
     font-size: 1.2rem;
 }
 
-#contact .section-subtitle {
+.pagina-index #contact .section-subtitle {
     margin-bottom: 15px;
     font-size: 1rem;
     line-height: 2.5;
@@ -84,91 +86,97 @@ textarea {
     color: #aaa;
 }
 
-#map-container {
+.pagina-index #map-container {
     margin-top: 25px;
     display: flex;
     justify-content: center;
 }
 
-#map-container img {
+.pagina-index #map-container img {
     width: 100%;
     max-width: 300px;
     border-radius: 8px;
 }
 
-
-/* Estilo para telas menores que 1170px */
+/* Telas <1170px */
 @media (max-width: 1170px) {
-    #contact {
-        padding: 30px 15px; /* Reduz o padding geral */
-        min-height: auto; /* Remove a altura mínima */
+    .pagina-index #contact {
+        padding: 30px 15px;
+        min-height: auto;
     }
 
-    #contact-content {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        gap: 20px; /* Reduz o espaçamento entre os itens */
-        max-width: 100%; /* Ocupa toda a largura disponível */
+    .pagina-index #contact-content {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 100%;
     }
 
-    #contact-form, #contact-info {
-        width: 100%; /* Ocupa toda a largura disponível */
-        padding: 15px; /* Reduz o padding interno */
+    .pagina-index #contact-form,
+    .pagina-index #contact-info {
+        width: 100%;
+        padding: 15px;
     }
 
-    #contact-form h2, #contact-info h2 {
-        font-size: 1.5rem; /* Reduz o tamanho do título */
-        text-align: center; /* Centraliza o texto */
+    .pagina-index #contact-form h2,
+    .pagina-index #contact-info h2 {
+        font-size: 1.5rem;
+        text-align: center;
     }
 
-    .form-group input, .form-group textarea {
-        font-size: 0.9rem; /* Reduz o tamanho do texto */
-    }
-    #contact-info p {
-        font-size: 0.9rem; /* Ajusta o tamanho do texto */
+    .pagina-index .form-group input,
+    .pagina-index .form-group textarea {
+        font-size: 0.9rem;
     }
 
-    #map-container img {
-        max-width: 250px; /* Reduz a largura da imagem */
+    .pagina-index #contact-info p {
+        font-size: 0.9rem;
+    }
+
+    .pagina-index #map-container img {
+        max-width: 250px;
     }
 }
 
-/* Estilo para telas menores que 600px */
+/* Telas <600px */
 @media (max-width: 600px) {
-    #contact {
+    .pagina-index #contact {
         padding: 20px 10px;
     }
 
-    #contact-form, #contact-info {
+    .pagina-index #contact-form,
+    .pagina-index #contact-info {
         padding: 10px;
-        background: #1c1c1c; /* Fundo escuro */
-        color: #eee; /* Texto claro */
+        background: #1c1c1c;
+        color: #eee;
     }
 
-    #contact-form h2, #contact-info h2 {
+    .pagina-index #contact-form h2,
+    .pagina-index #contact-info h2 {
         font-size: 1.3rem;
-        color: #fff; /* Garante que os títulos fiquem visíveis no fundo escuro */
+        color: #fff;
     }
 
-    .form-group label {
+    .pagina-index .form-group label {
         font-size: 0.9rem;
-        color: #ccc; /* Label em cor clara */
+        color: #ccc;
     }
 
-    .form-group input, .form-group textarea {
+    .pagina-index .form-group input,
+    .pagina-index .form-group textarea {
         font-size: 0.8rem;
         padding: 8px;
-        background: #2a2a2a; /* Campos escuros */
+        background: #2a2a2a;
         color: #f0f0f0;
         border: 1px solid #555;
     }
 
-    #contact-info p {
+    .pagina-index #contact-info p {
         font-size: 0.8rem;
         gap: 8px;
-        color: #ddd; /* Texto informativo claro */
+        color: #ddd;
     }
 
-    #map-container img {
+    .pagina-index #map-container img {
         max-width: 200px;
     }
 }
