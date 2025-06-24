@@ -66,7 +66,7 @@
 /* Ajustando o texto sobre o vídeo */
 .text-overlay h2 {
   position: absolute;
-  top: 5%; /* Coloca o texto "Cibersegurança" sobre o vídeo */
+  top: 0%; /* Coloca o texto "Cibersegurança" sobre o vídeo */
   font-family: 'Orbitron', sans-serif;
   left: 66%;
   transform: translateX(-80%);
@@ -83,7 +83,7 @@
   color: #a09d9d;
   font-family: 'Orbitron', sans-serif;
   text-align: center;
-  top: 75%; /* Coloca o texto "Cibersegurança" sobre o vídeo */
+  top: 78%; /* Coloca o texto "Cibersegurança" sobre o vídeo */
 }
 
 /* Estiliza o conteúdo do banner */
@@ -117,7 +117,9 @@
 
 /* Destaque para o texto em span */
 #cta .title span {
-  color: #333;
+  text-shadow: 0 0 5px rgba(91, 88, 88, 0.6);
+  color: #aaa;
+  text-transform: uppercase;
 }
 
 /* Ajustes dos botões das redes sociais */
@@ -212,6 +214,8 @@
     flex-direction: column;
     justify-content: center;
     padding: 15px;
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgba(10, 10, 10, 0.6);
   }
 
   #left-side, #right-side {

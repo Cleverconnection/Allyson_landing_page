@@ -129,6 +129,7 @@
     .pagina-index #partners {
         padding: 15px;
         min-height: auto;
+        background-color: rgba(10, 10, 10, 0.6);
     }
 
     .pagina-index #partners-content {
@@ -139,22 +140,31 @@
     .pagina-index #partners .section-title {
         font-size: 1.5rem;
         margin-bottom: 10px;
-        color: #ffffff;
+        text-align: center;
+        color: #aaa;
+        text-shadow: 0 0 5px rgba(91, 88, 88, 0.6);
+        font-family: 'Orbitron', sans-serif;
+        text-transform: uppercase;
     }
 
     .pagina-index #partners .section-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-bottom: 30px;
     }
 
-    .pagina-index #logos-container {
+    /* Container de logos dos clientes e parceiros */
+    .pagina-index .logos-container {
+        display: flex;
         flex-wrap: wrap;
-        gap: 10px;
         justify-content: center;
+        gap: 12px;
+        padding: 0;
     }
 
+    /* Ajusta tamanho das logos para caber 2 por linha */
     .pagina-index .partner-logo {
-        width: 60px;
+        flex: 0 1 calc(50% - 12px);
+        max-width: 35%;
         height: auto;
     }
 }

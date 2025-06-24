@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber FX - Abstratos</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      overflow: hidden;
+    }
+    canvas.fx {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+    }
+    #controls {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.7);
+      padding: 10px;
+      border: 1px solid #0ff;
+      z-index: 1000;
+    }
+    #controls button {
+      display: block;
+      margin: 5px 0;
+      width: 240px;
+      padding: 4px;
+      background: #000;
+      color: #0ff;
+      border: 1px solid #0ff;
+      cursor: pointer;
+      font-family: monospace;
+    }
+    #controls button:hover {
+      background: #0ff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+<div id="controls">
+  <button onclick="toggleEffect('glitch3d')">Toggle Glitch 3D</button>
+  <button onclick="toggleEffect('plasma')">Toggle Neural Plasma</button>
+  <button onclick="toggleEffect('fractal')">Toggle Fractal Grid</button>
+  <button onclick="toggleEffect('orbit')">Toggle Orbit Points</button>
+  <button onclick="toggleEffect('wires')">Toggle Wire Sparks</button>
+</div>
+
+<canvas id="glitch3d" class="fx"></canvas>
+<canvas id="plasma" class="fx"></canvas>
+<canvas id="fractal" class="fx"></canvas>
+<canvas id="orbit" class="fx"></canvas>
+<canvas id="wires" class="fx"></canvas>
+
+<script>
+  const canvases = {};
+  const intervals = {};
+
+  function setupCanvas(id) {
+    const canvas = document.getElementById(id);
+    canvases[id] = canvas;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.display = 'none';
+  }
+
+  function toggleEffect(id) {
+    const canvas = canvases[id];
+    if (canvas.style.display === 'none') {
+      canvas.style.display = 'block';
+      effects[id]();
+    } else {
+      canvas.style.display = 'none';
+      clearInterval(intervals[id]);
+    }
+  }
+
+  window.addEventListener('resize', () => {
+    for (let id in canvases) {
+      const c = canvases[id];
+      c.width = window.innerWidth;
+      c.height = window.innerHeight;
+    }
+  });
+
+  const effects = {
+    glitch3d: () => {
+      const ctx = canvases.glitch3d.getContext('2d');
+      intervals.glitch3d = setInterval(() => {
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, canvases.glitch3d.width, canvases.glitch3d.height);
+        for (let i = 0; i < 20; i++) {
+          const y = Math.random() * canvases.glitch3d.height;
+          ctx.fillStyle = `rgb(${Math.random()*255},255,255)`;
+          ctx.fillRect(0, y, canvases.glitch3d.width, 2);
+        }
+      }, 80);
+    },
+
+    plasma: () => {
+      const ctx = canvases.plasma.getContext('2d');
+      let t = 0;
+      intervals.plasma = setInterval(() => {
+        const w = canvases.plasma.width;
+        const h = canvases.plasma.height;
+        const img = ctx.createImageData(w, h);
+        for (let i = 0; i < img.data.length; i += 4) {
+          const x = ((i/4) % w);
+          const y = Math.floor((i/4) / w);
+          const value = Math.floor(128 + 128 * Math.sin(x/20 + t) * Math.sin(y/30 + t));
+          img.data[i] = 0;
+          img.data[i+1] = value;
+          img.data[i+2] = 255;
+          img.data[i+3] = 255;
+        }
+        ctx.putImageData(img, 0, 0);
+        t += 0.05;
+      }, 50);
+    },
+
+    fractal: () => {
+      const ctx = canvases.fractal.getContext('2d');
+      let shift = 0;
+      intervals.fractal = setInterval(() => {
+        ctx.clearRect(0, 0, canvases.fractal.width, canvases.fractal.height);
+        ctx.strokeStyle = '#0ff';
+        ctx.lineWidth = 1;
+        for (let y = 0; y < canvases.fractal.height; y += 20) {
+          ctx.beginPath();
+          for (let x = 0; x < canvases.fractal.width; x += 10) {
+            const val = Math.sin((x + shift)/30) * 20;
+            ctx.lineTo(x, y + val);
+          }
+          ctx.stroke();
+        }
+        shift += 2;
+      }, 40);
+    },
+
+    orbit: () => {
+      const ctx = canvases.orbit.getContext('2d');
+      let angle = 0;
+      intervals.orbit = setInterval(() => {
+        ctx.clearRect(0, 0, canvases.orbit.width, canvases.orbit.height);
+        const cx = canvases.orbit.width / 2;
+        const cy = canvases.orbit.height / 2;
+        ctx.fillStyle = '#0ff';
+        for (let i = 0; i < 12; i++) {
+          const a = angle + i * (Math.PI * 2 / 12);
+          const x = cx + Math.cos(a) * 150;
+          const y = cy + Math.sin(a) * 150;
+          ctx.beginPath();
+          ctx.arc(x, y, 6, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        angle += 0.05;
+      }, 30);
+    },
+
+    wires: () => {
+      const ctx = canvases.wires.getContext('2d');
+      intervals.wires = setInterval(() => {
+        ctx.fillStyle = 'rgba(0,0,0,0.1)';
+        ctx.fillRect(0, 0, canvases.wires.width, canvases.wires.height);
+        ctx.strokeStyle = '#00ffff';
+        ctx.beginPath();
+        let x = Math.random() * canvases.wires.width;
+        let y = Math.random() * canvases.wires.height;
+        ctx.moveTo(x, y);
+        for (let i = 0; i < 10; i++) {
+          x += (Math.random() - 0.5) * 100;
+          y += (Math.random() - 0.5) * 100;
+          ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      }, 80);
+    }
+  };
+
+  ['glitch3d', 'plasma', 'fractal', 'orbit', 'wires'].forEach(setupCanvas);
+</script>
+</body>
+</html>

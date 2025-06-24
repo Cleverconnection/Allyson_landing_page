@@ -42,8 +42,26 @@ $(document).ready(function () {
         }, 100); // Tempo de delay para a animação (300ms)
     });
 
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const buttonId = header.getAttribute('data-target');
+            openPopup(buttonId);
+            header.classList.add('popup-open'); // Adiciona uma classe ao header
+            setTimeout(() => {
+                header.classList.remove('popup-open'); // Remove a classe após um tempo
+            }, 200); // Tempo suficiente para abrir o popup
+        });
+    });
 
-    
+    document.addEventListener('click', function(event) {
+        const popup = document.getElementById('popup');
+        if (popup.classList.contains('open') && !popup.contains(event.target) && !event.target.classList.contains('popup-open') && !event.target.parentNode.classList.contains('popup-open')) {
+            popup.classList.remove('open');
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 100);
+        }
+    });
 
     // Contém os dados de cada serviço
     const services = {

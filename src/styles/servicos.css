@@ -155,7 +155,7 @@
 /* Título do serviço no popup */
 .pagina-index #popup .popup-content .service-text h2 {
     font-size: 1.8rem;
-    color: #00ff99;
+    color: #aaa;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -163,23 +163,25 @@
 /* Descrição do serviço */
 .pagina-index #popup .popup-content .service-text p {
     font-size: 1rem;
-    color: #bbb;
+    color: #ffffff;
     margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Lista de atividades */
 .pagina-index #popup .popup-content .service-text ul {
     list-style-type: disc;
     padding-left: 20px;
-    color: #bbb;
+    color: #ffffff;
     font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Botão de fechar o popup */
 .pagina-index #popup .close-popup {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 25px;
     font-size: 30px;
     font-weight: bold;
     color: #aaa;
@@ -263,7 +265,10 @@
 
     .pagina-index .servicos-title {
         font-size: 1.5rem;
-        color: #ffffff;
+        color: #aaa;
+        text-shadow: 0 0 5px rgba(91, 88, 88, 0.6);
+        font-family: 'Orbitron', sans-serif;
+        text-transform: uppercase;
     }
 
     .pagina-index .intro-text p {

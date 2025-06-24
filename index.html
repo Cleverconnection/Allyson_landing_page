@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="src/styles/servicos.css" />
     <link rel="stylesheet" href="src/styles/home.css" />
     <link rel="stylesheet" href="src/styles/header.css" />
+    <link rel="stylesheet" href="src/styles/sobre.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
@@ -51,7 +52,7 @@
                     <li class="nav-item"><a href="index.html">Início</a></li>
                     <li class="nav-item"><a href="#servicos">Serviços</a></li>
                     <li class="nav-item"><a href="#partners">Parceiros</a></li>
-                    <li class="nav-item"><a href="cybersecurity.html">Cibersegurança</a></li>
+                    <li class="nav-item"><a href="#sobre">Sobre Nós</a></li>
                 </ul>
             </div>
 
@@ -77,13 +78,10 @@
             <div id="right-side">
                 <a href="cybersecurity.html">
                     <div class="image-overlay">
-                        <!-- Vídeo de Cibersegurança -->
-                        <video id="cybersecurity-video" autoplay loop muted>
-                            <source src="src/videos/vdhomecyber.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                        <!-- GIF substituindo o vídeo -->
+                        <img src="src/videos/vdhomecyber.gif" alt="Cibersegurança" class="gif-background" />
 
-                        <!-- Texto sobre o vídeo -->
+                        <!-- Texto sobre a imagem -->
                         <div class="text-overlay">
                             <h2>CIBERSEGURANÇA</h2>
                             <p>Saiba mais como proteger sua empresa contra ataques cibernéticos - Clique Aqui</p>
@@ -97,7 +95,7 @@
             <h2 class="servicos-title">NOSSOS SERVIÇOS</h2>
             <div class="servicos-container">
                 <div class="intro-text">
-                    <p>Contamos com uma equipe experiente, especializada e com certificações globais em cibersegurança, oferecendo soluções sob medida para proteger seu ambiente contra ameaças e vulnerabilidades.</p>
+                    <p>Contamos com uma equipe experiente, especializada e com certificações globais, oferecendo soluções sob medida e especializada para a sua empresa</p>
                 </div>
 
                 <div class="accordion">
@@ -126,18 +124,18 @@
             </div>
         </section>
 
-        <!-- Popup de conteúdo -->
-        <div id="popup">
+        <div id="popup" class="pagina-index">
             <div class="popup-content">
-                <img id="popup-image" src="" alt="Imagem do Serviço" />
+                <span class="close-popup">&times;</span>
+                <img id="popup-image" src="" alt="Imagem do serviço" />
                 <div class="service-text">
                     <h2 id="popup-title"></h2>
                     <p id="popup-description"></p>
                     <ul id="popup-activities"></ul>
                 </div>
             </div>
-            <span class="close-popup">X</span>
         </div>
+
 
         <!-- Seção de Parceiros -->
         <section id="partners">
@@ -208,14 +206,42 @@
         </section>
     </main>
 
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="sobre-section">
+        <h2 class="sobre-title">Sobre Nós</h2>
+        <div class="sobre-container">
+        <div class="sobre-text">
+            <p>Somos uma empresa de cibersegurança formada por profissionais com vasta experiência no mercado, atuando de forma estratégica e alinhada às necessidades específicas de cada cliente. Nossa equipe conta com especialistas certificados internacionalmente, capazes de planejar e executar soluções sob medida para proteger empresas de todos os portes contra ameaças digitais.</p>
+            <p>Trabalhamos com dedicação para transformar a segurança cibernética em um diferencial competitivo para o seu negócio, com suporte técnico especializado e soluções atualizadas frente às tendências globais</p>
+        </div>
+        <div class="sobre-topicos">
+            <div class="sobre-item">
+            <h3><i class="fas fa-user-shield"></i> Profissionais Certificados</h3>
+            <p>Equipe com certificações globais como OSCP, CEH, CompTIA Security+ e CISSP, garantindo expertise técnica em cada solução implementada.</p>
+            </div>
+            <div class="sobre-item">
+            <h3><i class="fas fa-network-wired"></i> Expertise Especializada</h3>
+            <p>Atuamos em redes corporativas, cloud, IoT, e ambientes industriais, garantindo proteção completa contra ameaças modernas.</p>
+            </div>
+            <div class="sobre-item">
+            <h3><i class="fas fa-shield-alt"></i> Serviços Personalizados</h3>
+            <p>Criamos soluções sob medida, com foco em mitigação de riscos e continuidade dos negócios.</p>
+            </div>
+            <div class="sobre-item">
+            <h3><i class="fas fa-globe"></i> Presença Global</h3>
+            <p>Atuamos em diversos mercados, entregando soluções de cibersegurança para empresas no Brasil e no exterior.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="cyber-footer">
         <div class="footer-container">
         <div class="footer-links">
             <a href="#sobre">Sobre Nós</a>
             <a href="#servicos">Serviços para Empresas</a>
-            <a href="#parceiro">Soluções</a>
-            <a href="#">Contato</a>
+            <a href="#contact">Contato</a>
         </div>
 
         <div class="footer-info">
