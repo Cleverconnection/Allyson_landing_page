@@ -169,7 +169,7 @@
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background-color: #196e0e; /* Fundo mais escuro */
+  background-color: #1a9246; /* Fundo mais escuro */
   color: white;
   width: 60px;
   height: 60px;
@@ -246,9 +246,10 @@
   }
 
   /* Ajusta o vídeo */
-  #cybersecurity-video {
+  #right-side .gif-background {
     max-width: 100%;
-    margin-top: 20px;
+    height: auto;
+    margin-top: 0px;
   }
 
   /* Ajusta o botão flutuante para aparecer */
@@ -269,14 +270,14 @@
   /* Ajuste do título sobre o vídeo */
   .text-overlay h2 {
     font-size: 1.5rem;
-    top: 10%;
+    top: -5%;
     left: 50%;
     transform: translateX(-50%);
   }
 
   /* Ajuste do texto sobre o vídeo */
   .text-overlay p {
-    font-size: 0.9rem;
-    top: 80%;
+    font-size: 0.8rem;
+    top: 70%;
   }
 }
