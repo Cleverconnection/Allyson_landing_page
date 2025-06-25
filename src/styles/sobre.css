@@ -135,7 +135,7 @@
   }
 
   .pagina-index .sobre-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-top: -30px;
   }
 
@@ -148,9 +148,13 @@
     margin-left: 0;
     gap: 16px;
   }
+  .pagina-index .sobre-item h3 {
+    font-size: 1rem;
+    padding: 5px;
+  }
 
   .pagina-index .sobre-item h4 {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
 
   .pagina-index .sobre-item p {
@@ -158,7 +162,7 @@
   }
 
   .pagina-index .sobre-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.7;
     padding: 16px;
   }
