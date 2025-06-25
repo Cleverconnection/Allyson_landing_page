@@ -127,19 +127,13 @@
 /* Estilo para telas menores que 600px */
 @media (max-width: 600px) {
     .pagina-index #partners {
-        padding: 15px;
-        min-height: auto;
         background-color: rgba(10, 10, 10, 0.6);
-    }
-
-    .pagina-index #partners-content {
-        margin: 5% auto;
-        max-width: 100%;
+        min-height: 10%;
     }
 
     .pagina-index #partners .section-title {
         font-size: 1.2rem;
-        margin-bottom: 10px;
+        margin-top: -100px;
         text-align: center;
         color: #aaa;
         text-shadow: 0 0 5px rgba(91, 88, 88, 0.6);
@@ -149,7 +143,6 @@
 
     .pagina-index #partners .section-subtitle {
         font-size: 0.7rem;
-        margin-bottom: 30px;
     }
 
     /* Container de logos dos clientes e parceiros */

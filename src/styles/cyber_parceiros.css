@@ -253,52 +253,52 @@
 
   /* Responsividade para smartphones */
 @media (max-width: 600px) {
-  .parceiro-section {
+  .pagina-cybersecurity .parceiro-section {
     padding: 60px 16px;
     margin-bottom: 60px;
   }
 
-  .parceiro-title {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    margin-top: -30px;
+  .pagina-cybersecurity .parceiro-title {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    
   }
 
-  .parceiro-container {
+  .pagina-cybersecurity .parceiro-container {
     flex-direction: column;
     margin: 50px auto;
     gap: 24px;
   }
 
-  .parceiro-text {
-    font-size: 1rem;
+  .pagina-cybersecurity .parceiro-text {
+    font-size: 0.8rem;
     min-height: auto;
     padding: 0;
   }
 
-  .parceiro-text h3 {
-    font-size: 1.1rem;
-  }
-
-  .parceiro-text p {
-    font-size: 0.9rem;
-  }
-
-  .parceiro-header {
-    font-size: 0.95rem;
-    padding: 6px 10px;
-  }
-
-  .parceiro-toggle {
+  .pagina-cybersecurity .parceiro-text h3 {
     font-size: 1rem;
   }
 
-  .parceiro-detail {
-    font-size: 0.85rem;
+  .pagina-cybersecurity .parceiro-text p {
+    font-size: 0.8rem;
+  }
+
+  .pagina-cybersecurity .parceiro-header {
+    font-size: 0.8rem;
+    padding: 1px 20px;
+  }
+
+  .pagina-cybersecurity .parceiro-toggle {
+    font-size: 1rem;
+  }
+
+  .pagina-cybersecurity .parceiro-detail {
+    font-size: 0.8rem;
     padding: 6px 10px;
   }
 
-  .parceiro-gallery {
+  .pagina-cybersecurity .parceiro-gallery {
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -306,18 +306,12 @@
     padding-top: 0;
   }
 
-  .slide-arrow.left,
-  .slide-arrow.right {
+  .pagina-cybersecurity .slide-arrow.left,
+  .pagina-cybersecurity .slide-arrow.right {
     font-size: 20px;
     padding: 6px 10px;
     top: 50%;
   }
 
-  .slide-arrow.left {
-    left: 5px;
-  }
-
-  .slide-arrow.right {
-    right: 5px;
-  }
+ 
 }

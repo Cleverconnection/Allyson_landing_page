@@ -1,0 +1,427 @@
+/* Reset */
+.pagina-cybersecurity * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.pagina-cybersecurity html, body {
+  height: 100%;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #121212);
+  color: #ddd;
+  overflow-x: hidden;
+  overflow-y: auto; /* importante para scroll vertical */
+  line-height: 1.5;
+}
+
+/* Fundo partículas */
+.pagina-cybersecurity #particles-js {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none; /* para não interferir no scroll */
+}
+
+/* Header */
+.pagina-cybersecurity header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 90px; /* navbar maior */
+  background: rgba(15, 15, 15, 0.95);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+/* Navegação centralizada */
+.pagina-cybersecurity nav ul#nav_list {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  width: 100%;
+  max-width: 960px;
+  font-size: 1.0rem;
+}
+
+.pagina-cybersecurity nav ul#nav_list li a {
+  color: #aaa;
+  font-weight: 500;
+  font-size: 1.0rem;
+  text-decoration: none;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.25s ease;
+  left: 29px;
+}
+
+nav ul#nav_list li a:hover,
+.pagina-cybersecurity nav ul#nav_list li a.active {
+  color: #00e6e6;
+}
+
+.pagina-cybersecurity nav ul#nav_list li a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00e6e6;
+  transition: width 0.25s ease;
+}
+
+nav ul#nav_list li a:hover::after,
+.pagina-cybersecurity nav ul#nav_list li a.active::after {
+  width: 100%;
+}
+
+.pagina-cybersecurity #nav_name_cyber {
+  position: absolute;
+  left: 40px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #5b5858;
+  user-select: none;
+}
+
+.pagina-cybersecurity nav ul#nav_list {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  width: 100%;
+  max-width: 960px;
+  font-size: 1.0rem;
+  position: relative;
+}
+
+/* Estilo para os links */
+.pagina-cybersecurity nav ul#nav_list li a {
+  color: #aaa;
+  font-weight: 500;
+  font-size: 1.0rem;
+  text-decoration: none;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+nav ul#nav_list li a:hover,
+.pagina-cybersecurity nav ul#nav_list li a.active {
+  color: #00e6e6;
+}
+
+/* Linha animada */
+.pagina-cybersecurity nav ul#nav_list::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #00d4bb;
+  width: var(--line-width, 0);
+  transform: translateX(var(--line-left, 0));
+  transition: all 0.3s ease;
+}
+
+/* Seção hero cyber */
+.pagina-cybersecurity .hero-cyber {
+  min-height: calc(100vh - 90px);
+  height: calc(100vh - 90px);
+  padding: 160px 20px 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagina-cybersecurity .hero-content {
+  max-width: none;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.pagina-cybersecurity .hero-cyber .subtitle {
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 0.15em;
+  color: #aaa;
+  margin-bottom: 1rem;
+  display: block;
+  text-transform: uppercase;
+}
+
+.pagina-cybersecurity .hero-cyber .hero-title {
+  font-weight: 900;
+  color: white;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  text-shadow: 0 0 10px rgba(152, 150, 150, 0.7);
+}
+
+/* Botão Fale com um especialista */
+.pagina-cybersecurity .btn-hero {
+  display: inline-block;
+  padding: 14px 36px;
+  font-weight: 700;
+  color: #aaa;
+  border: 2px solid #d3d1d1;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.pagina-cybersecurity .btn-hero:hover {
+  background-color: #00e6e6;
+  color: #0a0a0a;
+}
+
+/* Social Icons Styling */
+.pagina-cybersecurity nav .social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+}
+
+.pagina-cybersecurity nav .social-icons a {
+  color: gray;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.pagina-cybersecurity nav .social-icons a:hover {
+  color: #ccc;
+}
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #1a9246;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: o;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+#whatsapp-button a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#whatsapp-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+@media screen and (max-width: 1170px) {
+  .pagina-cybersecurity header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px;
+  }
+
+  .pagina-cybersecurity #nav_name_cyber {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    text-align: center;
+    position: relative;
+    left: 0;
+  }
+
+  .pagina-cybersecurity nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .pagina-cybersecurity nav ul#nav_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .pagina-cybersecurity nav ul#nav_list li a {
+    font-size: 0.95rem;
+    padding: 6px 8px;
+  }
+
+  .pagina-cybersecurity nav .social-icons {
+    display: flex;
+    
+    gap: 14px;
+    margin-top: 10px;
+    position: absolute;
+  }
+
+  .pagina-cybersecurity nav .social-icons a {
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .pagina-cybersecurity header {
+    width: 100vw;
+    text-align: center;
+  }
+
+  .pagina-cybersecurity #nav_name_cyber {
+    position: relative;
+    left: 0;
+    font-size: 1.2rem;
+    letter-spacing: initial;
+  }
+
+  .pagina-cybersecurity nav ul#nav_list {
+    gap: 10px;
+    font-size: 0.6rem;
+    margin-right: 60px;
+  }
+
+  .pagina-cybersecurity nav ul#nav_list li a {
+    font-size: 0.8rem;
+  }
+
+  .pagina-cybersecurity .hero-cyber {
+    padding: 100px 12px 50px 12px;
+  }
+
+  .pagina-cybersecurity .hero-cyber .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .pagina-cybersecurity .hero-cyber .hero-title {
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+  }
+
+  .pagina-cybersecurity .btn-hero {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+
+  .pagina-cybersecurity nav .social-icons {
+    right: 5px;
+    margin-top: -18px;
+    display: none;
+  }
+
+  .pagina-cybersecurity nav .social-icons a {
+    font-size: 12px;
+  }
+
+  /* Estilo responsivo para o botão do WhatsApp */
+  .pagina-cybersecurity #whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+  }
+
+  .pagina-cybersecurity #whatsapp-button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+@media screen and (max-width: 300px) {
+.pagina-cybersecurity   header {
+    height: 55px;
+    padding: 0 10px;
+  }
+
+.pagina-cybersecurity   #nav_name_cyber {
+    font-size: 0.4rem;
+    left: 10px;
+  }
+
+.pagina-cybersecurity   nav ul#nav_list {
+    gap: 12px;
+    font-size: 0.8rem;
+    margin-top: 50px;
+  }
+
+.pagina-cybersecurity   nav ul#nav_list li a {
+    font-size: 0.8rem;
+  }
+
+.pagina-cybersecurity   .hero-cyber {
+    padding: 100px 12px 50px 12px;
+  }
+
+.pagina-cybersecurity   .hero-cyber .subtitle {
+    font-size: 0.75rem;
+  }
+
+.pagina-cybersecurity   .hero-cyber .hero-title {
+    font-size: 1.2rem;
+  }
+
+.pagina-cybersecurity   .btn-hero {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+
+.pagina-cybersecurity   nav .social-icons {
+    right: 5px;
+  }
+
+.pagina-cybersecurity   nav .social-icons a {
+    font-size: 16px;
+  }
+}

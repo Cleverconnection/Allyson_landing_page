@@ -140,7 +140,7 @@
 /* Telas <600px */
 @media (max-width: 600px) {
     .pagina-index #contact {
-        padding: 20px 10px;
+        padding: 100px 10px;
     }
 
     .pagina-index #contact-form,

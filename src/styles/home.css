@@ -291,7 +291,7 @@
   /* Ajuste do título sobre o vídeo */
   .text-overlay h2 {
     font-size: 1.0rem;
-    top: 0%;
+    top: -5%;
     left: 50%;
     transform: translateX(-50%);
   }

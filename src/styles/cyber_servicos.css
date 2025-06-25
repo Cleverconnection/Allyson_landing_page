@@ -7,9 +7,6 @@
   position: relative;
   margin-top: 80px;
 }
-#servicos {
-  scroll-margin-top: 90px; /* ajuste conforme a altura da navbar + margem */
-}
 
 .servicos-container {
   max-width: 1000px;
@@ -193,33 +190,33 @@
 
 /* Responsividade para smartphones */
 @media (max-width: 600px) {
-  .servicos-section {
+  .pagina-cybersecurity .servicos-section {
     padding: 60px 16px;
     margin-top: 60px;
   }
 
-  .servicos-title {
-    font-size: 1.5rem;
+  .pagina-cybersecurity .servicos-title {
+    font-size: 1.2rem;
     margin-bottom: 50px;
-    margin-top: -40px;
+    margin-top: -20px;
   }
 
-  .intro-text p {
-    font-size: 1rem;
-    margin-top: -30px;
+  .pagina-cybersecurity .intro-text p {
+    font-size: 0.8rem;
+    margin-top: -10px;
   }
 
-  .accordion-header {
-    font-size: 0.95rem;
-    padding: 15px 14px;
-    margin-top: -30px;
+  .pagina-cybersecurity .accordion-header {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    margin-top: -10px;
   }
 
-  .accordion-toggle {
-    font-size: 1.1rem;
+  .pagina-cybersecurity .accordion-toggle {
+    font-size: 0.8rem;
   }
 
-  .tooltip-bubble {
+  .pagina-cybersecurity .tooltip-bubble {
     position: static;
     transform: none;
     margin-top: 8px;

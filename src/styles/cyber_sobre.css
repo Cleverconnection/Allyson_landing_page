@@ -133,36 +133,40 @@
 
 /* Responsividade para smartphones */
 @media (max-width: 600px) {
-  .sobre-section {
+  .pagina-cybersecurity .sobre-section {
     padding: 60px 16px;
     margin-bottom: 60px;
   }
 
-  .sobre-title {
-    font-size: 1.5rem;
+  .pagina-cybersecurity .sobre-title {
+    font-size: 1.2rem;
     margin-top: -30px;
   }
 
-  .sobre-container {
+  .pagina-cybersecurity .sobre-container {
     padding-top: 30px;
     gap: 20px;
   }
 
-  .sobre-topicos {
+  .pagina-cybersecurity .sobre-topicos {
     margin-left: 0;
     gap: 16px;
   }
 
-  .sobre-item h4 {
-    font-size: 0.95rem;
+  .pagina-cybersecurity .sobre-item h3 {
+    font-size: 1rem;
   }
 
-  .sobre-item p {
-    font-size: 0.7rem;
+  .pagina-cybersecurity .sobre-item h4 {
+    font-size: 0.8rem;
   }
 
-  .sobre-text {
-    font-size: 0.9rem;
+  .pagina-cybersecurity .sobre-item p {
+    font-size: 0.8rem;
+  }
+
+  .pagina-cybersecurity .sobre-text {
+    font-size: 0.8rem;
     line-height: 1.7;
     padding: 16px;
   }
