@@ -164,6 +164,7 @@ html, body {
   #etica-page #nav_name_etica {
     font-size: 1.4rem;
     left: 20px;
+    display: none;
   }
 
   #etica-page .etica-title {

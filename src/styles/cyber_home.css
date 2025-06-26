@@ -247,56 +247,48 @@ nav ul#nav_list li a:hover,
 
 @media screen and (max-width: 1170px) {
   .pagina-cybersecurity header {
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 16px;
+    padding: 0 16px;
   }
 
   .pagina-cybersecurity #nav_name_cyber {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    text-align: center;
-    position: relative;
-    left: 0;
-  }
-
-  .pagina-cybersecurity nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    font-size: 1.8rem;
+    left: 22%;
+    margin-bottom: 4%;
   }
 
   .pagina-cybersecurity nav ul#nav_list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-    font-size: 0.95rem;
+    gap: 28px;
+    font-size: 0.9rem;
+    margin-top: 15%;
+    right: 10%;
   }
 
   .pagina-cybersecurity nav ul#nav_list li a {
+    font-size: 0.9rem;
+  }
+
+  .pagina-cybersecurity .hero-cyber .subtitle {
+    font-size: 2rem;
+  }
+
+  .pagina-cybersecurity .hero-cyber .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .pagina-cybersecurity .btn-hero {
+    padding: 12px 28px;
     font-size: 0.95rem;
-    padding: 6px 8px;
   }
 
   .pagina-cybersecurity nav .social-icons {
-    display: flex;
-    
-    gap: 14px;
-    margin-top: 10px;
-    position: absolute;
+    right: 4%;
+    margin-top: -3%;
   }
 
   .pagina-cybersecurity nav .social-icons a {
     font-size: 18px;
   }
 }
-
 
 @media screen and (max-width: 600px) {
   .pagina-cybersecurity header {

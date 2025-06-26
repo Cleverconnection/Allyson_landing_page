@@ -18,7 +18,7 @@
 }
 
 /* Ajusta o container do banner */
-#home {
+.pagina-index #home {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -30,7 +30,7 @@
 }
 
 /* Ajusta a coluna de informações */
-#left-side {
+.pagina-index #left-side {
   width: 40%;
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@
 }
 
 /* Ajusta a coluna de vídeo */
-#right-side {
+.pagina-index #right-side {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,32 +48,19 @@
   max-width: 650px;
 }
 
-/* Ajustes do vídeo para se ajustar corretamente à tela */
-#cybersecurity-video {
+/* Ajustando o texto sobre o vídeo */
+.pagina-index .image-overlay {
   position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 600px;
-  border-radius: 15px;
-  opacity: 0.9;
-  box-shadow: 0 0 15px 5px rgba(2, 2, 2, 0.8); /* Efeito neon */
-  background-color: #121212;
-  transition: all 0.3s ease-in-out;
+  display: no-block;
+  border-radius: 20px; /* Borda suave também no container */
 }
 
-#cybersecurity-video:hover {
+.pagina-index .image-overlay:hover {
   box-shadow: 0 0 30px 0.5px #00e6e6; /* Efeito de brilho no hover */
 }
 
 /* Ajustando o texto sobre o vídeo */
-.image-overlay {
-  position: relative;
-  display: inline-block;
-  border-radius: 20px; /* Borda suave também no container */
-}
-
-/* Ajustando o texto sobre o vídeo */
-.text-overlay h2 {
+.pagina-index .text-overlay h2 {
   position: absolute;
   top: 0%; /* Coloca o texto "Cibersegurança" sobre o vídeo */
   font-family: 'Orbitron', sans-serif;
@@ -85,7 +72,7 @@
   letter-spacing: 6px; /* Ajuste esse valor conforme necessário */
 }
 
-.text-overlay p {
+.pagina-index .text-overlay p {
   position: absolute;
   font-size: 1rem;
   font-family: 'Orbitron', sans-serif;
@@ -95,27 +82,27 @@
 }
 
 /* Texto comum (sem cor roxa) */
-.text-overlay .texto-normal {
+.pagina-index .text-overlay .texto-normal {
   color: #a09d9d;
   text-decoration: none;
 }
 
 /* Link customizado */
-.text-overlay .cta-link {
+.pagina-index .text-overlay .cta-link {
   color: #ffffff;             /* Cor destacada */
   font-weight: bold;
   text-decoration: none;
 }
 
 /* Hover opcional */
-.text-overlay .cta-link:hover {
+.pagina-index .text-overlay .cta-link:hover {
   color: #00ffee;
   text-decoration: underline;
 }
 
 
 /* Estiliza o conteúdo do banner */
-#cta {
+.pagina-index #cta {
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -127,7 +114,7 @@
 }
 
 /* Ajustes para centralizar o título e a descrição */
-#cta .title {
+.pagina-index #cta .title {
   font-size: 4.1rem;
   font-family: 'Orbitron', sans-serif;
   color: white;
@@ -135,7 +122,7 @@
 }
 
 /* Estiliza a descrição */
-#cta .description {
+.pagina-index #cta .description {
   font-size: 1.5rem;
   line-height: 1.5;
   color: #f0f0f0;
@@ -144,13 +131,13 @@
 }
 
 /* Destaque para o texto em span */
-#cta .title span {
+.pagina-index #cta .title span {
   text-shadow: 0 0 5px rgba(91, 88, 88, 0.6);
   color: #aaa;
   text-transform: uppercase;
 }
 /* Ajustes dos botões das redes sociais */
-.social-media-buttons a {
+.pagina-index .social-media-buttons a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,24 +153,24 @@
 }
 
 /* Efeito de hover para os ícones sociais */
-.social-media-buttons a:hover {
+.pagina-index .social-media-buttons a:hover {
   box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.2);
   transform: scale(1.2);
   background-color: #333333; /* Fundo mais escuro no hover */
 }
 
-.social-media-buttons a:nth-child(1):hover {
+.pagina-index .social-media-buttons a:nth-child(1):hover {
   background-color: #18a34b;
   color: white;
 }
 
-.social-media-buttons a:nth-child(2):hover {
+.pagina-index .social-media-buttons a:nth-child(2):hover {
   background-color: #0e4081;
   color: white;
 }
 
 /* Botão flutuante do WhatsApp */
-#whatsapp-button {
+.pagina-index #whatsapp-button {
   position: fixed;
   bottom: 20px;
   left: 20px;
@@ -202,45 +189,88 @@
   z-index: 1000;
 }
 
-#whatsapp-button a {
+.pagina-index #whatsapp-button a {
   color: white;
   font-size: 1.5rem;
   text-decoration: none;
 }
 
-#whatsapp-button.show {
+.pagina-index #whatsapp-button.show {
   opacity: 1;
   visibility: visible;
 }
 
 /* Oculta slider em telas maiores */
-#service-titles-slider {
+.pagina-index #service-titles-slider {
   display: none;
 }
 .text-overlay a {
   color: inherit;
   text-decoration: none !important;
 }
-/* Ajustes responsivos para telas menores de 1170px */
+
 @media screen and (max-width: 1170px) {
-  #home {
-    min-height: 100%;
-    padding-top: 0px;
+  .pagina-index #home {
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 5%;
+    text-align: center;
   }
 
-  #banner,
-  #banner img,
-  #cta {
+  .pagina-index #left-side,
+  .pagina-index #right-side {
     width: 100%;
+    max-width: 100%;
+    padding: 0;
+    justify-content: center;
     text-align: center;
+  }
+
+  .pagina-index #cta {
+    width: 100%;
+    max-width: 100%;
     align-items: center;
+  }
+
+  .pagina-index #cta .title {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 20%;
+  }
+
+  .pagina-index #cta .description {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .pagina-index .text-overlay h2 {
+    font-size: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .pagina-index .text-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .pagina-index .social-media-buttons a {
+    width: 42px;
+    height: 38px;
+    font-size: 1.15rem;
+  }
+
+  .pagina-index #whatsapp-button {
+    width: 50px;
+    height: 50px;
+    left: 15px;
+    bottom: 15px;
   }
 }
 
-/* Ajustes responsivos para dispositivos móveis com largura de até 600px */
 @media screen and (max-width: 600px) {
   /* Ajusta o layout para uma coluna */
-  #home {
+  .pagina-index #home {
     flex-direction: column;
     justify-content: center;
     padding: 15px;
@@ -248,33 +278,33 @@
     background-color: rgba(10, 10, 10, 0.6);
   }
 
-  #left-side, #right-side {
+  .pagina-index #left-side, #right-side {
     width: 100%;
     padding: 0;
   }
 
   /* Ajusta os títulos e o conteúdo */
-  #cta .title {
+  .pagina-index #cta .title {
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 10px;
   }
 
-  #cta .description {
+  .pagina-index #cta .description {
     font-size: 1.0rem;
     text-align: center;
     margin-bottom: 10px;
   }
 
   /* Ajusta o vídeo */
-  #right-side .gif-background {
+  .pagina-index #right-side .gif-background {
     max-width: 100%;
     height: auto;
     margin-top: 0px;
   }
 
   /* Ajusta o botão flutuante para aparecer */
-  #whatsapp-button {
+  .pagina-index #whatsapp-button {
     opacity: 1;
     visibility: visible;
     bottom: 10px;
@@ -282,14 +312,14 @@
   }
 
   /* Ajustes para os botões sociais */
-  .social-media-buttons a {
+  .pagina-index .social-media-buttons a {
     width: 40px;
     height: 35px;
     font-size: 1.1rem;
   }
 
   /* Ajuste do título sobre o vídeo */
-  .text-overlay h2 {
+  .pagina-index .text-overlay h2 {
     font-size: 1.0rem;
     top: -5%;
     left: 50%;
@@ -297,7 +327,7 @@
   }
 
   /* Ajuste do texto sobre o vídeo */
-  .text-overlay p {
+  .pagina-index .text-overlay p {
     font-size: 0.6rem;
     top: 70%;
   }

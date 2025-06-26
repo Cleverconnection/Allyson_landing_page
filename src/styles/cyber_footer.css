@@ -98,6 +98,43 @@
   color: #00d4bb;
 }
 
+@media screen and (max-width: 1170px) {
+  .cyber-footer {
+    padding: 32px 20px;
+    font-size: 0.8rem;
+  }
+
+  .footer-container {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .footer-links {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .footer-info p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .footer-social a {
+    font-size: 1.05rem;
+  }
+
+  .footer-legal {
+    font-size: 0.72rem;
+    text-align: center;
+  }
+}
+
+
 /* Ajustes para smartphones */
 @media (max-width: 600px) {
   .cyber-footer {

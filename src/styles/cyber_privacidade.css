@@ -161,6 +161,7 @@ nav#privacidade-nav ul#nav_list li a.active::after {
   #nav_name_privacidade {
     font-size: 1.2rem;
     left: 20px;
+    display: none;
   }
 
   nav#privacidade-nav ul#nav_list {

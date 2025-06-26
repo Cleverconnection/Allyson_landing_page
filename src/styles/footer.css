@@ -94,6 +94,42 @@
   color: #00d4bb;
 }
 
+@media screen and (max-width: 1170px) {
+    .pagina-index .cyber-footer {
+        padding: 32px 20px;
+        font-size: 0.8rem;
+    }
+
+    .pagina-index .footer-container {
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .pagina-index .footer-links {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .pagina-index .footer-links a {
+        font-size: 0.85rem;
+    }
+
+    .pagina-index .footer-info p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .pagina-index .footer-social a {
+        font-size: 1.05rem;
+    }
+
+    .pagina-index .footer-legal {
+        font-size: 0.72rem;
+        text-align: center;
+    }
+}
+
+
 /* Ajustes para smartphones */
 @media (max-width: 600px) {
     .pagina-index .cyber-footer {

@@ -113,21 +113,34 @@
     color: #0a0a0a;
 }
 
-/* Responsivo < 1170px */
 @media screen and (max-width: 1170px) {
-    .pagina-index #navbar {
-        justify-content: space-between;
-    }
+  .pagina-index header {
+    padding: 0 16px;
+  }
 
-    .pagina-index #nav_list {
-        display: none;
-    }
+  .pagina-index #nav_name {
+    font-size: 1.7rem;
+    left: 110px;
+    margin-bottom: 4%;
+  }
 
-    .pagina-index #nav_name {
-        font-size: 1.5rem;
-        left: 20px;
-    }
+  .pagina-index #nav_list {
+    gap: 28px;
+    margin-left: auto;
+    margin-top: 13%;
+  }
+
+  .pagina-index .nav-item a {
+    font-size: 0.95rem;
+  }
+
+  .pagina-index .btn-default {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
 }
+
+
 
 /* Responsivo < 600px */
 @media screen and (max-width: 600px) {

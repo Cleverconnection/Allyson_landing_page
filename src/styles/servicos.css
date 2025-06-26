@@ -192,70 +192,80 @@
     color: #fff;
 }
 
-/* Responsividade para telas médias (até 1170px) */
 @media screen and (max-width: 1170px) {
-    .pagina-index .servicos-section {
-        padding: 60px 24px;
-        margin-top: 60px;
-    }
-
-    #servicos {
-        scroll-margin-top: 120px; /* ajuste conforme a altura da navbar + margem */
-    }
-
-    .pagina-index .servicos-title {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        margin-top: -30px;
-    }
-
     .pagina-index .servicos-container {
         flex-direction: column;
         gap: 40px;
         align-items: center;
+        padding: 0 20px;
+    }
+    .pagina-index #servicos {
+        scroll-margin-top: 30px; /* ajuste conforme a altura da navbar + margem */
+    }
+
+    .pagina-index .servicos-title {
+        margin-bottom: 30%;
     }
 
     .pagina-index .intro-text {
         padding-right: 0;
-        justify-content: center;
-        max-width: 100%;
+        margin-top: -25%;
+        max-width: 90%;
+        text-align: center;
     }
 
     .pagina-index .intro-text p {
-        font-size: 1.05rem;
-        margin-top: 20px;
-        text-align: center;
+        font-size: 1rem;
+        color: #00d4bb;
     }
 
     .pagina-index .accordion {
         padding-left: 0;
-        max-width: 100%;
-        min-width: unset;
+        max-width: 90%;
         width: 100%;
-        gap: 10px;
     }
 
     .pagina-index .accordion-header {
         font-size: 1rem;
-        padding: 14px 18px;
+        padding: 8px 16px;
     }
 
     .pagina-index .accordion-toggle {
         font-size: 1.2rem;
     }
 
-    .pagina-index .tooltip-bubble {
-        position: static;
-        transform: none;
-        margin-top: 8px;
-        max-width: 100%;
-        padding: 12px 16px;
-        font-size: 0.9rem;
-        box-shadow: none;
-        background-color: #00e6e6;
-        color: #0a0a0a;
+    .pagina-index .servicos-title {
+        font-size: 2rem;
+    }
+
+    .pagina-index #popup {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .pagina-index #popup .popup-content img {
+        max-width: 40%;
+    }
+
+    .pagina-index #popup .popup-content .service-text {
+        max-width: 55%;
+        font-size: 0.95rem;
+    }
+
+    .pagina-index #popup .popup-content .service-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .pagina-index #popup .popup-content .service-text p,
+    .pagina-index #popup .popup-content .service-text ul {
+        font-size: 0.95rem;
+    }
+
+    .pagina-index #popup .close-popup {
+        font-size: 28px;
     }
 }
+
 
 @media (max-width: 600px) {
     .pagina-index .servicos-section {
